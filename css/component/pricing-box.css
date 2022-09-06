@@ -7,8 +7,33 @@
  Pricing ox
 
  [HTML]
-
-
+ <div class="pricing-box [max-3-cols]">
+   <div class="item">
+     <div class="img-box">
+       <picture>
+         <source srcset="/sample.webp">
+         <img class="img" src="sample.jpg" alt="Sample Image" loading="lazy">
+       </picture>
+     </div>
+     <div class="content-box">
+       <p class="title">Basic</p>
+       <p class="price-box">
+         <span class="currency">$</span>
+         <span class="amount">0</span>
+         <span class="per">/mo</span>
+       </p>
+       <p class="description">The description of the basic plan is...</p>
+       <ul class="list">
+         <li class="item check">Feature 1</li>
+         <li class="item check">Feature 2</li>
+         <li class="item check">Feature 3</li>
+         <li class="item uncheck">Feature 4</li>
+         <li class="item uncheck">Feature 5</li>
+       </ul>
+       <button class="submit [fill]" type="button">GET STARTED</button>
+     </div>
+   </div>
+ </div>
 **********************************************************************/
 .pricing-box {
     -webkit-align-items: flex-start;
@@ -41,7 +66,7 @@
     .pricing-box > .item {
         width: calc(25% - 20px);
     }
-    .pricing-box > .item.max-3-cols {
+    .pricing-box.max-3-cols > .item {
         width: calc(33% - 20px);
     }
 }

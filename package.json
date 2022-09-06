@@ -13,11 +13,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/noknow-hub/web-design.git",
+    "url": "git+https://github.com/noknow-hub/web-design.git"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "type": "module",
-  "version": "0.1.8"
+  "version": "0.1.9"
 }

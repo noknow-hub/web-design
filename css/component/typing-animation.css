@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+@import '../foundation/style.css';
+
+
+/**********************************************************************
+ Typing Animation
+
+ [HTML]
+ <p class="typing-animation">Hello World</p>
+**********************************************************************/
+.typing-animation {
+    display: inline-block;
+    position: relative;
+}
+.typing-animation::after {
+    animation: typing-animation 1s infinite;
+    background-color: var(--nkw-color-default-text);
+    bottom: 0;
+    content: '';
+    display: inline-block;
+    height: 20px;
+    position: relative;
+    right: -5px;
+    width: 7px;
+}
+@keyframes typing-animation {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
