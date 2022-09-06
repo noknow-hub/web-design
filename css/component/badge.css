@@ -1,0 +1,63 @@
+@charset "UTF-8";
+
+@import '../foundation/style.css';
+
+
+/**********************************************************************
+ Badge
+
+ [HTML]
+ <p class="badge">Badge</p>
+ <a class="badge-link" href="">Badge Link</a>
+ <p class="badge">
+   <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><use xlink:href=""></use></svg>
+   <span>Badge with icon</span>
+ </p>
+ <a class="badge-link" href="">
+   <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><use xlink:href=""></use></svg>
+   <span>Badge Link with icon</span>
+ </a>
+ <a class="badge-link" href="">
+   <span>Badge Link with icon</span>
+   <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><use xlink:href=""></use></svg>
+ </a>
+**********************************************************************/
+.badge,
+.badge-link {
+    background-color: var(--nkw-color-light-gray);
+    display: inline-block;
+    font-size: 0.85em;
+    line-height: normal;
+    margin: 2.5px;
+    padding: 2.5px 10px;
+}
+.badge-link {
+    transition: opacity 0.3s ease-in-out;
+}
+.badge-link:hover {
+    opacity: 0.6;
+}
+.badge > .icon,
+.badge-link > .icon {
+    display: inline-block;
+    height: var(--nkw-icon-size-small);
+    margin: 0;
+    padding: 0;
+    width: var(--nkw-icon-size-small);
+    vertical-align: middle;
+}
+@media screen and (min-width: 768px) {
+    .badge > .icon,
+    .badge-link > .icon {
+        height: var(--nkw-icon-size-medium);
+        width: var(--nkw-icon-size-medium);
+    }
+}
+.badge > .icon:first-child,
+.badge-link > .icon:first-child {
+    margin-right: 3px;
+}
+.badge > .icon:last-child,
+.badge-link > .icon:last-child {
+    margin-left: 3px;
+}

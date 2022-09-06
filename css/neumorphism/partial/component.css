@@ -1,0 +1,706 @@
+@charset "UTF-8";
+
+
+/**********************************************************************
+ Accordion box
+
+ [HTML]
+ <div class="accordion-box [accordion-box--inset]">
+   <ul class="accordion-box--list">
+     <li class="accordion-box--item active">
+       <h3 class="accordion-box--heading--has-content">
+         <time class="accordion-box--date">2022/05/13</time>
+         <span>TITLE</span>
+       </h3>
+       <p class="accordion-box--content">TEXT</p>
+     </li>
+     <li>
+       <h3 class="accordion-box--heading--has-content">MORE</h3>
+       <ul class="accordion-box--list">
+         <li class="accordion-box--item">
+           <h3 class="accordion-box--heading">
+             <time class="accordion-box--date">2022/05/13</time>
+             <span>TITLE</span>
+           </h3>
+           <p class="accordion-box--content">TEXT</p>
+         </li>
+       </ul>
+     </li>
+   </ul>
+ </div>
+**********************************************************************/
+.accordion-box {
+    background-color: var(--nkw-neumorphism-bg-color-theme-light);
+    border: var(--nkw-neumorphism-border-light);
+    border-radius: var(--nkw-neumorphism-border-radius);
+    box-shadow: var(--nkw-neumorphism-box-shadow-light);
+    box-sizing: border-box;
+    color: var(--nkw-neumorphism-color-theme-light);
+    margin: 20px;
+    padding: 20px;
+}
+.section .accordion-box {
+    margin: 0 auto;
+}
+.accordion-box--inset {
+    box-shadow: var(--nkw-neumorphism-box-shadow-inset-light);
+}
+.accordion-box--list {
+    list-style-type: none;
+    margin: 0;
+}
+.accordion-box--item {
+    border-bottom: 3px solid var(--nkw-color-light);
+    box-sizing: border-box;
+    overflow-y: hidden;
+    padding: 20px 0;
+}
+.accordion-box--heading,
+[class^="accordion-box--heading--"] {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    align-items: center;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -webkit-flexbox;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 0.9em;
+    font-weight: bold;
+    line-height: 1.75;
+    margin: 0;
+    position: relative;
+    word-break: break-all;
+}
+.accordion-box--heading--has-content {
+    cursor: pointer;
+    padding-right: 32px;
+}
+.accordion-box--heading--has-content::after {
+    border-bottom: 2px solid var(--nkw-color-dark);
+    border-right: 2px solid var(--nkw-color-dark);
+    content: '';
+    display: block;
+    height: 8px;
+    position: absolute;
+    right: 10px;
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    transition: transform 0.3s ease-in-out;
+    width: 8px;
+}
+.accordion-box--item.active > .accordion-box--heading--has-content::after {
+    -moz-transform: rotate(-135deg);
+    -ms-transform: rotate(-135deg);
+    -o-transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+    transform: rotate(-135deg);
+}
+.accordion-box--date {
+    flex-shrink: 0;
+    font-size: 0.9em;
+    width: 100%;
+}
+.accordion-box--content {
+    font-size: 0.9em;
+    line-height: 1.5;
+    margin: 0;
+    max-height: 0;
+    overflow-y: hidden;
+    transition: max-height 0.3s ease-in-out;
+    word-break: break-all;
+}
+.accordion-box--content::before {
+    box-sizing: border-box;
+    content: '';
+    display: block;
+    padding-top: 10px;
+    position: relative;
+}
+
+
+/**********************************************************************
+ Badge
+
+ [HTML]
+ <span class="badge"></span>
+ <time class="badge--inset"></time>
+ <a class="badge-link" href=""></a>
+ <a class="badge-link--inset" href=""></a>
+**********************************************************************/
+.badge,
+[class^="badge--"] {
+    background-color: var(--nkw-neumorphism-bg-color-theme-light);
+    border: var(--nkw-neumorphism-border-light);
+    border-radius: var(--nkw-neumorphism-border-radius);
+    box-shadow: var(--nkw-neumorphism-box-shadow-light);
+    color: var(--nkw-neumorphism-color-theme-light);
+}
+.badge-link,
+[class^="badge-link--"] {
+    background-color: var(--nkw-neumorphism-bg-color-theme-light);
+    border: var(--nkw-neumorphism-border-light);
+    border-radius: var(--nkw-neumorphism-border-radius);
+    box-shadow: var(--nkw-neumorphism-box-shadow-light);
+    color: var(--nkw-neumorphism-color-theme-light);
+}
+.badge--inset {
+    box-shadow: var(--nkw-neumorphism-box-shadow-inset-light);
+}
+.badge-link--inset {
+    box-shadow: var(--nkw-neumorphism-box-shadow-inset-light);
+}
+
+
+/**********************************************************************
+ Box
+
+ [HTML]
+ <div class="box [box--inset]"></div>
+**********************************************************************/
+.box,
+[class^="box--"] {
+    background-color: var(--nkw-neumorphism-bg-color-theme-light);
+    border: var(--nkw-neumorphism-border-light);
+    border-radius: var(--nkw-neumorphism-border-radius);
+    box-shadow: var(--nkw-neumorphism-box-shadow-light);
+    box-sizing: border-box;
+    color: var(--nkw-neumorphism-color-theme-light);
+    margin: 20px;
+    padding: 20px;
+    width: calc(100% - 40px);
+}
+.section .box {
+    margin: 20px auto;
+}
+.box--inset {
+    box-shadow: var(--nkw-neumorphism-box-shadow-inset-light);
+}
+
+
+/**********************************************************************
+ Card view box
+
+ [HTML]
+ <div class="card-view-box">
+   <ul class="card-view-box--view">
+     <li class="card-view-box--item">
+       <a class="card-view-box--link" href="">
+         <div class="card-view-box--tag-box">
+           <span class="card-view-box--tag"></span>
+         </div>
+         <div class="card-view-box--img-box [card-view-box--img-box--round]">
+           <img class="card-view-box--img" src="" alt="" loading="lazy">
+         </div>
+         <div class="card-view-box--title-box">
+           <h3 class="card-view-box--title"></h3>
+         </div>
+         <div class="card-view-box--excerpt-box">
+           <p class="card-view-box--excerpt"></p>
+         </div>
+         <div class="card-view-box--date-box right">
+           <p class="card-view-box--date"></p>
+         </div>
+       </a>
+     </li>
+     ...
+   </ul>
+   <button class="card-view-box--see-more" id="nkw-card-view-box-see-more">See more</button>
+   <p class="card-view-box--not-found" id="nkw-card-view-box-not-found">XXX was not found</p>
+ </div>
+**********************************************************************/
+.card-view-box--item {
+    border: var(--nkw-neumorphism-border-light);
+    border-radius: var(--nkw-neumorphism-border-radius);
+    box-shadow: var(--nkw-neumorphism-box-shadow-light);
+}
+.card-view-box--item:hover {
+    box-shadow: var(--nkw-neumorphism-box-shadow-inset-light);
+    transition: box-shadow 0.3s ease-in-out;
+}
+.card-view-box--img-box {
+    border-radius: var(--nkw-neumorphism-border-radius);
+}
+.card-view-box--see-more {
+    background-color: var(--nkw-neumorphism-bg-color-theme-light);
+    border: var(--nkw-neumorphism-border-light);
+    border-radius: var(--nkw-neumorphism-border-radius);
+    box-shadow: var(--nkw-neumorphism-box-shadow-light);
+    color: var(--nkw-neumorphism-color-theme-light);
+}
+.card-view-box--see-more:hover {
+    box-shadow: var(--nkw-neumorphism-box-shadow-inset-light);
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+
+/**********************************************************************
+ Console box
+
+ [HTML]
+ <div class="console-box">
+   <span class="console-box--title"></span>
+   <pre class="console-box--console"></pre>
+ </div>
+**********************************************************************/
+.console-box {
+    background-color: var(--nkw-neumorphism-bg-color-theme-light);
+    border: var(--nkw-neumorphism-border-light);
+    border-radius: var(--nkw-neumorphism-border-radius);
+    box-shadow: var(--nkw-neumorphism-box-shadow-inset-light);
+    color: var(--nkw-neumorphism-color-theme-light);
+}
+.console-box--title {
+    background-color: var(--nkw-neumorphism-bg-color-theme-light);
+    border: var(--nkw-neumorphism-border-light);
+    border-radius: var(--nkw-neumorphism-border-radius);
+    box-shadow: var(--nkw-neumorphism-box-shadow-inset-light);
+    color: var(--nkw-neumorphism-color-theme-light);
+}
+
+
+/**********************************************************************
+ Directory structure box
+**********************************************************************/
+.directory-structure-box--link {
+    background-color: unset !important;
+    box-shadow: var(--nkw-neumorphism-box-shadow-hover-off-light);
+}
+.directory-structure-box--link:hover {
+    box-shadow: var(--nkw-neumorphism-box-shadow-hover-on-light);
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+
+/**********************************************************************
+ Hoverable
+**********************************************************************/
+.hoverable {
+    background-color: unset !important;
+    box-shadow: var(--nkw-neumorphism-box-shadow-hover-off-light);
+}
+.hoverable:hover {
+    box-shadow: var(--nkw-neumorphism-box-shadow-hover-on-light);
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+
+/**********************************************************************
+ Icon
+**********************************************************************/
+.icon-size-x-large {
+    height: var(--nkw-neumorphism-icon-size-x-large);
+    width: var(--nkw-neumorphism-icon-size-x-large);
+}
+.icon-size-large {
+    height: var(--nkw-neumorphism-icon-size-large);
+    width: var(--nkw-neumorphism-icon-size-large);
+}
+.icon-size-medium {
+    height: var(--nkw-neumorphism-icon-size-medium);
+    width: var(--nkw-neumorphism-icon-size-medium);
+}
+.icon-size-small {
+    height: var(--nkw-neumorphism-icon-size-small);
+    width: var(--nkw-neumorphism-icon-size-small);
+}
+.icon-size-x-small {
+    height: var(--nkw-neumorphism-icon-size-x-small);
+    width: var(--nkw-neumorphism-icon-size-x-small);
+}
+
+
+/**********************************************************************
+ Image box
+
+ [HTML]
+ <div class="image-box">
+   <img class="image-box--img" src="" alt="">
+ </div>
+ <div class="image-box">
+   <figure class="image-box--figure">
+     <img class="image-box--img" src="" alt="">
+     <figcaption class="image-box--figcaption">Fig.1 - Trulli, Puglia, Italy.</figcaption>
+   </figure>
+ </div>
+ <div class="image-box">
+   <picture>
+     <source srcset="">
+     <img class="image-box--img" src="" alt="">
+   </picture>
+ </div>
+**********************************************************************/
+.image-box {
+    background-color: var(--nkw-neumorphism-bg-color-theme-light);
+    border: var(--nkw-neumorphism-border-light);
+    border-radius: var(--nkw-neumorphism-border-radius);
+    box-shadow: var(--nkw-neumorphism-box-shadow-light);
+    color: var(--nkw-neumorphism-color-theme-light);
+}
+.image-box.inset {
+    box-shadow: var(--nkw-neumorphism-box-shadow-inset-light);
+}
+
+
+/**********************************************************************
+ Horizontal list box
+
+ [HTML]
+ <div class="horizontal-list-box">
+   <ul class="horizontal-list-box--list">
+     <li class="horizontal-list-box--item">
+       <div class="horizontal-list-box--img-box">
+         <img class="horizontal-list-box--img" src="" alt="" loading="lazy">
+         or
+         <picture>
+           <source srcset="/img/tool/svg_icon_downloader/thumbnail.webp">
+           <img class="horizontal-list-box--img" src="img/tool/svg_icon_downloader/thumbnail.png" alt="SVG icon downloader" loading="lazy">
+         </picture>
+       </div>
+       <div class="horizontal-list-box--content-box">
+         <h3 class="horizontal-list-box--title"></h3>
+         <div class="horizontal-list-box--attr-box">
+           <time class="horizontal-list-box--date"></time>
+           <span class="horizontal-list-box--tag"></span>
+         </div>
+         <p class="horizontal-list-box--excerpt"></p>
+         <div class="horizontal-list-box--read-more-box">
+           <a class="horizontal-list-box--read-more" href="">Read more</a>
+         </div>
+       </div>
+     </li>
+     ...
+   </ul>
+   <button class="horizontal-list-box--see-more" id="horizontal-list-box--see-more" type="button">See more</button>
+   <p class="horizontal-list-box--not-found" id="horizontal-list-box--not-found">XXX was not found</p>
+ </div>
+**********************************************************************/
+.horizontal-list-box--item {
+    border-top: 1px solid var(--nkw-neumorphism-color-theme-light);
+}
+.horizontal-list-box--img-box {
+    border-radius: var(--nkw-neumorphism-border-radius);
+}
+.horizontal-list-box--read-more {
+    background-color: var(--nkw-neumorphism-bg-color-theme-light);
+    border: var(--nkw-neumorphism-border-light);
+    border-radius: var(--nkw-neumorphism-border-radius);
+    box-shadow: var(--nkw-neumorphism-box-shadow-light);
+    color: var(--nkw-neumorphism-color-theme-light);
+}
+.horizontal-list-box--read-more:hover {
+    box-shadow: var(--nkw-neumorphism-box-shadow-inset-light);
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+
+/**********************************************************************
+ Form Group
+
+ [HTML]
+ <div class="form-group-box">
+   <label class="form-group-box--label"></label>
+   <input class="form-group-box--input" name="" type="">
+   <p class="form-group-box--note color-error"></p>
+ </div>
+ <div class="form-group-box">
+   <label class="form-group-box--label"></label>
+   <select class="form-group-box--select" name="">
+     <option value=""></option>
+     <option value=""></option>
+   </select>
+   <p class="form-group-box--note color-error"></p>
+ </div>
+ <div class="form-group-box">
+   <label class="form-group-box--label"></label>
+   <div class="form-group-box--icon-input-box">
+     <input class="form-group-box--input" name="" type="">
+     <svg class="form-group-box--icon-input-box--post-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"></svg>
+   </div>
+ </div>
+ <div class="form-group-box">
+   <label class="form-group-box--label"></label>
+   <div class="form-group-box--icon-input-box">
+     <svg class="form-group-box--icon-input-box--pre-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"></svg>
+     <input class="form-group-box--input" name="" type="">
+   </div>
+ </div>
+**********************************************************************/
+.form-group-box--icon-input-box {
+    background-color: var(--nkw-neumorphism-bg-color-theme-light);
+    border: var(--nkw-neumorphism-border-light);
+    border-radius: var(--nkw-neumorphism-border-radius);
+    box-shadow: var(--nkw-neumorphism-box-shadow-light);
+}
+.form-group-box--input {
+    background-color: var(--nkw-neumorphism-bg-color-theme-light);
+    border: var(--nkw-neumorphism-border-light);
+    border-radius: var(--nkw-neumorphism-border-radius);
+    box-shadow: var(--nkw-neumorphism-box-shadow-inset-light);
+}
+.form-group-box--select {
+    background-color: var(--nkw-neumorphism-bg-color-theme-light);
+    border: var(--nkw-neumorphism-border-light);
+    border-radius: var(--nkw-neumorphism-border-radius);
+    box-shadow: var(--nkw-neumorphism-box-shadow-inset-light);
+}
+.form-group-box--textarea {
+    background-color: var(--nkw-neumorphism-bg-color-theme-light);
+    border: var(--nkw-neumorphism-border-light);
+    border-radius: var(--nkw-neumorphism-border-radius);
+    box-shadow: var(--nkw-neumorphism-box-shadow-inset-light);
+}
+
+
+/**********************************************************************
+ Table box
+
+ [HTML]
+ <div class="table-box">
+   <table class="table-box--table">
+     <thead class="table-box--thead">
+       <tr class="table-box--tr">
+         <th class="table-box--th--checkbox">
+           <input type="checkbox" name="" value="">
+         </th>
+         <th class="table-box--th"></th>
+         <th class="table-box--th"></th>
+       </tr>
+     </thead>
+     <tbody class="table-box--tbody" id="nkw-table-box--tbody">
+       <tr class="table-box--tr">
+         <td class="table-box--td"></td>
+         <td class="table-box--td"></td>
+         <td class="table-box--td"></td>
+       </tr>
+     </tbody>
+   </table>
+   <p class="table-box--not-found" id="table-box---not-found">NOT FOUND</p>
+   <button class="table-box--see-more" id="table-box--see-more" type="button" >SEE MORE</button>
+ </div>
+**********************************************************************/
+.table-box {
+    margin: 20px auto;
+    width: calc(100% - 40px);
+}
+.section .table-box {
+    width: 100%;
+}
+.table-box--table {
+    border-collapse: collapse;
+    position: relative;
+    width: 100%;
+}
+.table-box--tbody > .table-box--tr {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+}
+.table-box--thead > .table-box--tr {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.table-box--tbody > .table-box--tr:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+.table-box--th,
+[class^="table-box--th--"] {
+    box-sizing: border-box;
+    filter: opacity(0.7);
+    font-weight: bold;
+    padding: 10px 5px;
+    text-align: left;
+    vertical-align: middle;
+}
+.table-box--th.sticky,
+.table-box--td.sticky {
+    position: sticky;
+    left: 0;
+}
+.table-box--not-found {
+    display: none;
+    font-size: 0.8rem;
+    font-weight: bold;
+    opacity: 0.7;
+    margin: 3.0em 0;
+    text-align: center;
+    width: 100%;
+}
+.table-box--not-found.active {
+    display: block;
+}
+.table-box--see-more {
+    border-radius: 7px;
+    box-sizing: border-box;
+    cursor: pointer;
+    display: none;
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin: 1.5em auto;
+    outline: none;
+    padding: 1.0em;
+    text-align: center;
+    transition: all 0.3s;
+}
+.table-box--see-more:hover {
+    opacity: 0.7;
+}
+.table-box--see-more.active {
+    display: block;
+}
+.table-box--th--checkbox {
+    max-width: 50px;
+    width: 5%;
+}
+.table-box > table th > .sortable-box {
+    -webkit-align-items: center;
+    align-items: center;
+    cursor: pointer;
+    display: -webkit-flex;
+    display: flex;
+}
+.table-box > table th > .sortable-box > svg {
+    height: var(--nkw-icon-size);
+    opacity: 0.3;
+    transition: opacity,transform 0.3s;
+    width: var(--nkw-icon-size);
+}
+.table-box > table th > .sortable-box:hover > svg {
+    opacity: 1;
+}
+.table-box > table th > .sortable-box.active > svg {
+    opacity: 1;
+}
+.table-box > table th > .sortable-box.order-by-desc > svg {
+    -webkit-transform:rotateX(180deg);
+    transform:rotateX(180deg);
+}
+.table-box > table th > .with-info-box {
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: flex;
+    position: relative;
+}
+.table-box > table th > .with-info-box > .info-box {
+    position: relative;
+}
+.table-box > table th > .with-info-box > .info-box > .icon {
+    height: 24px;
+    margin: 0 3px;
+    width: 24px;
+}
+.table-box > table th > .with-info-box > .info-box > .icon > svg {
+    fill: inherit;
+    height: 100%;
+    width: 100%;
+}
+.table-box > table th > .with-info-box > .info-box > .pop-up {
+    background-color: #fff;
+    border-radius: 7px;
+    font-size: 0.75rem;
+    font-weight: normal;
+    left: -50%;
+    line-height: 1.5;
+    opacity: 0;
+    padding: 1.0em;
+    position: absolute;
+    text-align: left;
+    top: 200%;
+    transform: translateY(-1.0rem);
+    transition: all 0.3s;
+    visibility: hidden;
+    white-space: pre-wrap;
+    width: 300px;
+    word-break: break-word;
+    z-index: 2;
+}
+.table-box > table th > .with-info-box > .info-box:hover > .pop-up {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+}
+.table-box > table th > .with-info-box > .info-box > .pop-up > strong,
+.table-box > table th > .with-info-box > .info-box > .pop-up > b {
+    font-weight: bold;
+}
+.table-box > table td {
+    box-sizing: border-box;
+    padding: 10px 5px;
+    vertical-align: middle;
+    word-break: break-word;
+}
+@media screen and (min-width: 481px) {
+    .table-box > table td {
+        padding: 20px 5px;
+    }
+}
+.table-box > table td.center {
+    text-align: center;
+}
+.table-box > table td .img {
+    object-fit: contain;
+    max-height: 100px;
+    width: 100%;
+}
+.table-box > table td .link {
+    color: inherit;
+}
+.table-box > table td .icon {
+    cursor: pointer;
+    display: inline-block;
+    height: 24px;
+    margin: 0.5px;
+    transition: all 0.3s ease-in-out;
+    width: 24px;
+}
+.table-box > table td .icon:hover {
+    opacity: 0.3;
+}
+.table-box > table td .icon > svg {
+    fill: inherit;
+    height: 100%;
+    width: 100%;
+}
+.table-box > table td .text-btn {
+    background-color: inherit;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.3s;
+    white-space: nowrap;
+}
+.table-box > table td .text-btn:hover {
+    opacity: 0.7;
+}
+.table-box > table .nowrap {
+    white-space: nowrap;
+}
+.table-box > table .w-10 {
+    width: 10%;
+}
+.table-box > table .w-50 {
+    width: 50%;
+}
+.table-box > table .w-150px {
+    width: 150px;
+}
+.table-box > table .f-s-smaller {
+    font-size: smaller;
+}
+
+
+
+
+
+
+
+
+
+
+

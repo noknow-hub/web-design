@@ -1,0 +1,987 @@
+@charset "UTF-8";
+
+
+/**********************************************************************
+ Article thumbnail box
+
+ [HTML]
+ <div class="article-thumbnail-box">
+   <img class="article-thumbnail-bo--img" src="" alt="" width="" height="">
+ </div>
+**********************************************************************/
+.article-thumbnail-box {
+    height: 300px;
+    width: 100%;
+}
+@media screen and (min-width: 768px) {
+    .article-thumbnail-box {
+        height: 400px;
+    }
+}
+@media screen and (min-width: 1024px) {
+    .article-thumbnail-box {
+        height: 500px;
+    }
+}
+.article-thumbnail-box--img {
+    display: block;
+    height: 100%;
+    object-fit: contain;
+    width: 100%;
+}
+
+
+/**********************************************************************
+ Badge
+
+ [HTML]
+ <span class="badge"></span>
+ <time class="badge--inset"></time>
+ <a class="badge-link" href=""></a>
+ <a class="badge-link--inset" href=""></a>
+**********************************************************************/
+.badge, 
+[class^="badge--"] {
+    box-sizing: border-box;
+    margin: 5px;
+    padding: 5px;
+}
+.badge-link, 
+[class^="badge-link--"] {
+    box-sizing: border-box;
+    margin: 5px;
+    padding: 5px;
+}
+.badge-link:hover {
+    opacity: 0.7;
+    transition: opacity 0.3s ease-in-out;
+}
+.badge--inset {
+    
+}
+.badge-link--inset {
+    
+}
+
+
+
+/**********************************************************************
+ Box
+
+ [HTML]
+ <div class="box [box--inset]"></div>
+**********************************************************************/
+.box,
+[class^="box--"] {
+    box-sizing: border-box;
+    margin: 20px;
+    padding: 20px;
+}
+.section .box {
+    margin: 20px auto;
+}
+.box--inset {
+    
+}
+
+
+/**********************************************************************
+ Card view box
+
+ [HTML]
+ <div class="card-view-box">
+   <ul class="card-view-box--view">
+     <li class="card-view-box--item">
+       <a class="card-view-box--link" href="">
+         <div class="card-view-box--tag-box">
+           <span class="card-view-box--tag"></span>
+         </div>
+         <div class="card-view-box--img-box">
+           <img class="card-view-box--img" src="" alt="" loading="lazy">
+         </div>
+         <div class="card-view-box--title-box">
+           <h3 class="card-view-box--title"></h3>
+         </div>
+         <div class="card-view-box--excerpt-box">
+           <p class="card-view-box--excerpt"></p>
+         </div>
+         <div class="card-view-box--date-box right">
+           <p class="card-view-box--date"></p>
+         </div>
+       </a>
+     </li>
+     ...
+   </ul>
+   <button class="card-view-box--see-more" id="nkw-card-view-box-see-more">See more</button>
+   <p class="card-view-box--not-found" id="nkw-card-view-box-not-found">XXX was not found</p>
+ </div>
+**********************************************************************/
+.card-view-box {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+.card-view-box--view {
+    background-color: inherit;
+    border-radius: 7px;
+    display: -webkit-flex;
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    transition: all 0.3s;
+    width: 100%;
+}
+.card-view-box--link {
+    box-sizing: border-box;
+    color: inherit;
+    display: block;
+    padding: 20px;
+    text-decoration: none;
+}
+.card-view-box--item {
+    background-color: inherit;
+    box-sizing: border-box;
+    display: block;
+    margin: 20px;
+    position: relative;
+    transition: opacity 0.3s ease-in-out;
+    width: calc(100% - 40px);
+}
+.card-view-box--item:hover {
+    
+}
+@media screen and (min-width: 768px) {
+    .card-view-box--item {
+        max-width: calc(50% - 40px);
+    }
+}
+@media screen and (min-width: 1200px) {
+    .card-view-box--item {
+        max-width: calc(33% - 40px);
+    }
+}
+.card-view-box--tag-box {
+    background-color: rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    color: #fff;
+    display: inline-block;
+    -webkit-filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.5));
+    filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.5));
+    left: 1.0em;
+    padding: 1px 10px;
+    position: absolute;
+    text-align: center;
+    top: 1.0em;
+    width: 15%;
+}
+.card-view-box__tag {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+.card-view-box--img-box,
+.card-view-box--img-box--round {
+    height: 150px;
+    overflow: hidden;
+    width: 100%;
+}
+@media screen and (min-width: 768px) {
+    .card-view-box--img-box {
+        height: 160px;
+    }
+}
+@media screen and (min-width: 1024px) {
+    .card-view-box--img-box {
+        height: 170px;
+    }
+}
+.card-view-box--img-box--round {
+    border-radius: var(--nkw-border-radius);
+    overflow: hidden;
+}
+.card-view-box--img {
+    display: block;
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+}
+.card-view-box--title-box {
+    margin: 1.0em 0 0 0;
+    width: 100%;
+}
+.card-view-box--title {
+    font-size: 1.2em;
+    font-weight: bold;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    word-break: break-word;
+}
+@media screen and (min-width: 768px) {
+    .card-view-box--title {
+        font-size: 1.0em;
+    }
+}
+.card-view-box--title {
+    text-decoration: underline;
+}
+.card-view-box--excerpt-box {
+    margin: 10px 0 0 0;
+    width: 100%;
+}
+.card-view-box--excerpt {
+    font-size: 0.9em;
+    line-height: 1.5;
+    margin: 0;
+    opacity: 0.8;
+    padding: 0;
+    word-break: break-word;
+}
+@media screen and (min-width: 768px) {
+    .card-view-box--excerpt {
+        font-size: 0.75em;
+    }
+}
+.card-view-box--date-box {
+    margin: 10px 0 0 0;
+    width: 100%;
+}
+.card-view-box--date-box.right {
+    text-align: right;
+}
+.card-view-box--date {
+    font-size: 0.8em;
+    margin: 0;
+    opacity: 0.8;
+    padding: 0;
+    word-break: break-word;
+}
+@media screen and (min-width: 768px) {
+    .card-view-box--date {
+        font-size: 0.7em;
+    }
+}
+.card-view-box--see-more {
+    box-sizing: border-box;
+    cursor: pointer;
+    display: none;
+    font-size: 1.0em;
+    font-weight: bold;
+    margin: 1.0em auto;
+    outline: none;
+    padding: 15px 60px;
+    transition: opacity 0.3s ease-in-out;
+}
+@media screen and (min-width: 768px) {
+    .card-view-box--see-more {
+        padding: 20px 100px;
+    }
+}
+.card-view-box--see-more.active {
+    display: block;
+}
+.card-view-box--see-more:hover {
+    
+}
+.card-view-box--not-found {
+    background-color: inherit;
+    box-sizing: border-box;
+    color: inherit;
+    display: none;
+    font-size: 0.85em;
+    font-weight: bold;
+    margin: 1.0em 0;
+    padding: 0;
+    text-align: center;
+    width: 100%;
+}
+.card-view-box--not-found.active {
+    display: block;
+}
+
+
+/**********************************************************************
+ Directory structure box
+
+ [HTML]
+ <div class="directory-structure-box">
+   <nav>
+     <ul class="directory-structure-box--list">
+       <li class="directory-structure-box--heading-item">
+         <a class="directory-structure-box--link" href="">
+           <p class="directory-structure-box--txt">LINK</p>
+         </a>
+       </li>
+       <li class="directory-structure-box--item">
+         <span class="directory-structure-box--title">TITLE</span>
+       </li>
+       <li class="directory-structure-box--item--drop-down active">
+         <p class="directory-structure-box--with-icon">
+           <svg class="directory-structure-box--pre-icon"></svg>
+           <span class="directory-structure-box--title">TITLE</span>
+         </p>
+       </li>
+       <ul class="directory-structure-box--sub-list">
+         <li class="directory-structure-box--item">
+           <a class="directory-structure-box--link" href="">LINK</a>
+         </li>
+         <li class="directory-structure-box--item">
+           <a class="directory-structure-box--link">LINK</a>
+         </li>
+         <li class="directory-structure-box--item--drop-down active">
+           <span class="directory-structure-box--title">TITLE</span>
+         </li>
+       </ul>
+     </ul>
+   </nav>
+ </div>
+**********************************************************************/
+.directory-structure-box {
+    box-sizing: border-box;
+    margin: 20px auto;
+    padding: 10px;
+    width: calc(100% - 40px);
+}
+@media screen and (min-width: 481px) {
+    .directory-structure-box {
+        padding: 20px;
+    }
+}
+.directory-structure-box .directory-structure-box--list,
+.directory-structure-box .directory-structure-box--sub-list {
+    box-sizing: border-box;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+.directory-structure-box .directory-structure-box--sub-list {
+    border-left: 3px solid var(--nkw-color-muted);
+    list-style-type: none;
+    margin-left: 1.0rem;
+    padding-left: 3px;
+    width: calc(100% - 1.0rem);
+}
+.directory-structure-box .directory-structure-box--item--drop-down + .directory-structure-box--sub-list {
+    height: 0;
+    overflow: hidden;
+}
+.directory-structure-box .directory-structure-box--item--drop-down.active + .directory-structure-box--sub-list {
+    height: auto;
+}
+.directory-structure-box .directory-structure-box--item,
+.directory-structure-box .directory-structure-box--item,
+.directory-structure-box .directory-structure-box--item--drop-down {
+    -webkit-align-items: center;
+    align-items: center;
+    box-sizing: border-box;
+    color: inherit;
+    display: -webkit-flex;
+    display: flex;
+    font-size: 0.95em;
+    line-height: 1.25;
+    min-height: 36px;
+    padding: 3px;
+    text-decoration: none;
+}
+.directory-structure-box .directory-structure-box--item.active,
+.directory-structure-box .directory-structure-box--item--drop-down.active {
+    margin-bottom: 0.5em;
+}
+.directory-structure-box .directory-structure-box--item--drop-down {
+    cursor: pointer;
+}
+.directory-structure-box .directory-structure-box--link {
+    border-radius: var(--nkw-border-radius);
+    width: 100%;
+}
+.directory-structure-box .directory-structure-box--heading {
+    -webkit-align-items: center;
+    align-items: center;
+    box-sizing: border-box;
+    display: -webkit-flex;
+    display: flex;
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-top: 20px;
+    padding: 7px;
+}
+.directory-structure-box .directory-structure-box--txt {
+    -webkit-align-items: center;
+    align-items: center;
+    box-sizing: border-box;
+    display: -webkit-flex;
+    display: flex;
+    padding: 7px;
+}
+.directory-structure-box .directory-structure-box--txt-tag {
+    font-size: 0.75em;
+    margin: 0 3px;
+    opacity: 0.7;
+}
+.directory-structure-box .directory-structure-box--with-post-icon {
+    margin: 3px 0;
+    padding: 7px;
+}
+.directory-structure-box .directory-structure-box--pre-icon,
+.directory-structure-box .directory-structure-box--post-icon {
+    fill: inherit;
+    height: var(--nkw-icon-size-medium);
+    min-width: var(--nkw-icon-size-medium);
+    width: var(--nkw-icon-size-medium);
+}
+.directory-structure-box .directory-structure-box--pre-icon {
+    margin-right: 5px;
+}
+.directory-structure-box .directory-structure-box--post-icon {
+    margin-left: 5px;
+}
+
+
+/**********************************************************************
+ Icon
+**********************************************************************/
+.icon-size-x-large {
+    height: var(--nkw-icon-size-x-large);
+    width: var(--nkw-icon-size-x-large);
+}
+.icon-size-large {
+    height: var(--nkw-icon-size-large);
+    width: var(--nkw-icon-size-large);
+}
+.icon-size-medium {
+    height: var(--nkw-icon-size-medium);
+    width: var(--nkw-icon-size-medium);
+}
+.icon-size-small {
+    height: var(--nkw-icon-size-small);
+    width: var(--nkw-icon-size-small);
+}
+.icon-size-x-small {
+    height: var(--nkw-icon-size-x-small);
+    width: var(--nkw-icon-size-x-small);
+}
+
+
+/**********************************************************************
+ Image list view box
+
+ [HTML]
+ <div class="image-list-view-box">
+   <ul class="image-list-view-box--list" id="nkw-image-list-view">
+     <li class="image-list-view-box--item">
+       [input class="image-list-view-box--input" type="checkbox"]
+       <img class="image-list-view-box--img">
+     </li>
+     <li class="image-list-view-box--checkable-item">
+       <video class="image-list-view-box--img"></video>
+     </li>
+   </ul>
+   <button class="image-list-view-box--see-more" id="image-list-view-box--see-more" type="button">See more</button>
+   <p class="image-list-view-box--not-found" id="image-list-view-box--not-found">XXX was not found</p>
+ </div>
+**********************************************************************/
+.image-list-view-box {
+    margin: 20px 0;
+    padding: 0;
+    width: 100%;
+}
+.image-list-view-box--list {
+    background-color: inherit;
+    border-radius: 7px;
+    display: -webkit-flex;
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    transition: all 0.3s;
+    width: 100%;
+}
+.image-list-view-box--item,
+.image-list-view-box--checkable-item {
+    display: block;
+    margin: 20px;
+    width: calc(50% - 40px);
+}
+@media screen and (min-width: 768px) {
+    .image-list-view-box--item,
+    .image-list-view-box--checkable-item {
+        margin: 1.0em;
+        width: calc(33% - 40px);
+    }
+}
+@media screen and (min-width: 1024px) {
+    .image-list-view-box--item,
+    .image-list-view-box--checkable-item {
+        width: calc(25% - 40px);
+    }
+}
+.image-list-view-box--checkable-item {
+    position: relative;
+}
+.image-list-view-box--img {
+    display: block;
+    max-height: 100%;
+    object-fit: contain;
+    width: 100%;
+}
+.image-list-view-box--input[type="checkbox"] {
+    display: none;
+}
+.image-list-view-box--input[type="checkbox"]:checked + * {
+    filter: opacity(0.7);
+    position: relative;
+}
+.image-list-view-box--input[type="checkbox"]:checked + *::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 20px;
+    height: 10px;
+    border-left: 5px solid #000;
+    border-bottom: 5px solid #000;
+    transform: rotate(-45deg);
+}
+.image-list-view-box--not-found {
+    display: none;
+    font-size: 0.8rem;
+    font-weight: bold;
+    opacity: 0.7;
+    margin: 3.0em 0;
+    text-align: center;
+    width: 100%;
+}
+.image-list-view-box--not-found.active {
+    display: block;
+}
+.image-list-view-box--see-more {
+    border-radius: 7px;
+    box-sizing: border-box;
+    cursor: pointer;
+    display: none;
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin: 1.5em auto;
+    outline: none;
+    padding: 1.0em;
+    text-align: center;
+    transition: all 0.3s;
+}
+.image-list-view-box--see-more:hover {
+    opacity: 0.7;
+}
+.image-list-view-box--see-more.active {
+    display: block;
+}
+
+
+/**********************************************************************
+ Image box
+
+ [HTML]
+ <div class="image-box">
+   <img class="image-box--img" src="" alt="">
+ </div>
+ <div class="image-box">
+   <figure class="image-box--figure">
+     <img class="image-box--img" src="" alt="">
+     <figcaption class="image-box--figcaption">Fig.1 - Trulli, Puglia, Italy.</figcaption>
+   </figure>
+ </div>
+ <div class="image-box">
+   <picture>
+     <source srcset="">
+     <img class="image-box--img" src="" alt="">
+   </picture>
+ </div>
+**********************************************************************/
+.image-box {
+    box-sizing: border-box;
+    height: 250px;
+    margin: 20px;
+    padding: 20px;
+}
+.section .image-box {
+    margin: 20px auto;
+}
+@media screen and (min-width: 600px) {
+    .image-box {
+        height: 350px;
+    }
+}
+@media screen and (min-width: 768px) {
+    .image-box {
+        height: 400px;
+    }
+}
+@media screen and (min-width: 896px) {
+    .image-box {
+        height: 450px;
+    }
+}
+@media screen and (min-width: 1024px) {
+    .image-box {
+        height: 500px;
+    }
+}
+@media screen and (min-width: 1200px) {
+    .image-box {
+        height: 550px;
+    }
+}
+.image-box--figure {
+    height: 100%;
+    position: relative;
+}
+.image-box--img {
+    display: block;
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+}
+.image-box--figcaption {
+    bottom: 0;
+    font-size: 0.8em;
+    opacity: 0.7;
+    position: absolute;
+    right: 0;
+    text-align: right;
+}
+
+
+/**********************************************************************
+ Horizontal list box
+
+ [HTML]
+ <div class="horizontal-list-box">
+   <ul class="horizontal-list-box--list">
+     <li class="horizontal-list-box--item">
+       <div class="horizontal-list-box--img-box">
+         <img class="horizontal-list-box--img" src="" alt="" loading="lazy">
+         or
+         <picture>
+           <source srcset="/img/tool/svg_icon_downloader/thumbnail.webp">
+            <img class="horizontal-list-box--img" src="img/tool/svg_icon_downloader/thumbnail.png" alt="SVG icon downloader" loading="lazy">
+         </picture>
+       </div>
+       <div class="horizontal-list-box--content-box">
+         <h3 class="horizontal-list-box--title"></h3>
+         <div class="horizontal-list-box--attr-box">
+           <time class="horizontal-list-box--date"></time>
+           <span class="horizontal-list-box--tag"></span>
+         </div>
+         <p class="horizontal-list-box--excerpt"></p>
+       </div>
+     </li>
+     ...
+   </ul>
+   <button class="horizontal-list-box--see-more" id="horizontal-list-box--see-more" type="button">See more</button>
+   <p class="horizontal-list-box--not-found" id="horizontal-list-box--not-found">XXX was not found</p>
+ </div>
+**********************************************************************/
+.horizontal-list-box {
+    box-sizing: border-box;
+    margin: 20px auto;
+    width: calc(100% - 40px);
+}
+.horizontal-list-box--item {
+    border-top: 1px solid var(--nkw-color-muted);
+    box-sizing: border-box;
+    display: -webkit-flex;
+    display: flex;
+    padding: 20px 0;
+}
+.horizontal-list-box--item:first-child {
+    border-top: none;
+}
+.horizontal-list-box--img-box {
+    box-sizing: border-box;
+    height: 100%;
+    overflow: hidden;
+    padding-right: 20px;
+    width: 170px;
+}
+.horizontal-list-box--content-box {
+    flex: 1 1;
+}
+.horizontal-list-box--img {
+    display: block;
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+}
+.horizontal-list-box--title {
+    font-size: 1.15em;
+    font-weight: bold;
+    text-decoration: underline;
+    transition: opacity 0.3s ease-in-out;
+}
+.horizontal-list-box--title:hover {
+    opacity: 0.7;
+}
+.horizontal-list-box--excerpt {
+    font-size: 0.9em;
+    margin-top: 5px;
+}
+.horizontal-list-box--attr-box {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: flex;
+}
+.horizontal-list-box--attr {
+    font-size: 0.8em;
+    margin-left: 5px;
+    opacity: 0.8;
+}
+.horizontal-list-box--attr:first-child {
+    margin-left: unset;
+}
+.horizontal-list-box--read-more-box {
+    margin: 20px 0; 
+    text-align: right;
+}
+.horizontal-list-box--read-more {
+    box-sizing: border-box;
+    font-size: 0.85em;
+    font-weight: bold;
+    margin: 10px;
+    padding: 10px;
+}
+.horizontal-list-box--read-more:hover {
+    
+}
+
+
+/**********************************************************************
+ Form Group
+
+ [HTML]
+ <div class="form-group-box">
+   <label class="form-group-box--label"></label>
+   <input class="form-group-box--input" name="" type="">
+   <p class="form-group-box--note color-error [active]"></p>
+ </div>
+ <div class="form-group-box">
+   <label class="form-group-box--label"></label>
+   <select class="form-group-box--select" name="">
+     <option value=""></option>
+     <option value=""></option>
+   </select>
+   <p class="form-group-box--note color-error [active]"></p>
+ </div>
+ <div class="form-group-box">
+   <label class="form-group-box--label"></label>
+   <div class="form-group-box--icon-input-box">
+     <input class="form-group-box--input" name="" type="">
+     <svg class="form-group-box--icon-input-box--post-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"></svg>
+   </div>
+ </div>
+ <div class="form-group-box">
+   <label class="form-group-box--label"></label>
+   <div class="form-group-box--icon-input-box">
+     <svg class="form-group-box--icon-input-box--pre-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"></svg>
+     <input class="form-group-box--input" name="" type="">
+   </div>
+ </div>
+**********************************************************************/
+.form-group {
+    margin: 10px 5px;
+    position: relative;
+    width: calc(100% - 10px);
+}
+.form-group-box--label {
+    box-sizing: border-box;
+    display: inline-block;
+    font-family: inherit;
+    font-size: 0.7em;
+    margin-bottom: 5px;
+    width: 100%;
+}
+.form-group-box--note {
+    display: none;
+    font-size: 0.7em;
+    margin-top: 5px;
+    word-break: break-all;
+}
+.form-group-box--note.active {
+    display: inline-block;
+}
+.form-group-box--icon-input-box {
+    -webkit-align-items: center;
+    align-items: center;
+    box-sizing: border-box;
+    display: -webkit-flex;
+    display: flex;
+    position: relative;
+}
+.form-group-box--icon-input-box > .form-group-box--icon-input-box--pre-icon {
+    padding-left: calc(var(--nkw-icon-size-medium) + 20px);
+}
+.form-group-box--icon-input-box > .form-group-box--icon-input-box--post-icon {
+    padding-right: calc(var(--nkw-icon-size-medium) + 20px);
+}
+.form-group-box--input {
+    box-sizing: border-box;
+    font-family: inherit;
+    font-size: inherit;
+    height: 50px;
+    outline: none;
+    padding: 10px;
+    width: 100%;
+}
+.form-group-box--icon-input-box > form-group-box--input {
+    background-color: inherit;
+}
+.form-group-box--select {
+    box-sizing: border-box;
+    font-family: inherit;
+    font-size: inherit;
+    height: 50px;
+    outline: none;
+    padding: 10px;
+    width: 100%;
+}
+.form-group-box--icon-input-box > .form-group-box--select {
+    background-color: inherit;
+}
+.form-group-box--textarea {
+    box-sizing: border-box;
+    font-family: inherit;
+    font-size: inherit;
+    min-height: 7.0em;
+    outline: none;
+    padding: 10px;
+    resize: vertical;
+    width: 100%;
+}
+.form-group-box--icon-input-box > .form-group-box--textarea {
+    background-color: inherit;
+}
+.form-group-box--icon-input-box--pre-icon,
+.form-group-box--icon-input-box--post-icon {
+    box-sizing: border-box;
+    display: block;
+    fill: inherit;
+    height: var(--nkw-icon-size-medium);
+    position: absolute;
+    width: calc(var(--nkw-icon-size-medium) + 20px);
+}
+.form-group-box--icon-input-box--pre-icon {
+    left: 0;
+}
+.form-group-box--icon-input-box--post-icon {
+    right: 0;
+}
+
+
+/**********************************************************************
+ Tag list
+
+ [HTML]
+ <ul class="tag-list">
+   <li class="tag-list--item">
+     [<svg class="tag-list--pre-icon"></svg>]
+     <span>TAG_NAME</span>
+     [<svg class="tag-list--post-icon"></svg>]
+   </li>
+ </ul>
+**********************************************************************/
+.tag-list {
+    -webkit-align-items: center;
+    align-items: center;
+    box-sizing: border-box;
+    display: -webkit-flex;
+    display: flex;
+    flex-wrap: wrap; 
+    list-style-type: none;
+    margin: 20px 0;
+    padding: 0;
+}
+@media screen and (min-width: 768px) {
+    .tag-list {
+        margin: 1.0em;
+    }
+}
+.tag-list--item {
+    -webkit-align-items: center;
+    align-items: center;
+    border-radius: var(--nkw-border-radius);
+    box-sizing: border-box;
+    display: -webkit-flex;
+    display: flex;
+    font-size: 0.85em;
+    margin: 3px;
+    padding: 5px 10px;
+}
+.tag-list--pre-icon,
+.tag-list--post-icon {
+    height: var(--nkw-icon-size-medium);
+    width: var(--nkw-icon-size-medium);
+    vertical-align: middle;
+}
+.tag-list--post-icon {
+    margin-left: 5px;
+}
+.tag-list--pre-icon {
+    margin-right: 5px;
+}
+
+
+/**********************************************************************
+ .text-with-icon
+
+ [HTML]
+ <p class="text-with-icon">
+   <svg class="text-with-icon--pre-icon">...</svg>
+   <span>TEXT</span>
+   <svg class="text-with-icon--post-icon icon-size-small">...</svg>
+ </p>
+**********************************************************************/
+.text-with-icon {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    align-items: center;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -webkit-flexbox;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}
+.text-with-icon--post-icon,
+.text-with-icon--pre-icon {
+    height: var(--nkw-icon-size-medium);
+    vertical-align: middle;
+    width: var(--nkw-icon-size-medium);
+}
+.text-with-icon--post-icon {
+    margin-left: 5px;
+}
+.text-with-icon--pre-icon {
+    margin-right: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

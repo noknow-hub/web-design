@@ -1,0 +1,58 @@
+@charset "UTF-8";
+
+@import '../foundation/style.css';
+
+
+/**********************************************************************
+ Breadcrumb.
+
+ [HTML]
+ <nav class="breadcrumb">
+   <ul class="list">
+     <li class="item"><a class="link" href="" title="">Level-1<a></li>
+     <li class="item">Level-2</li>
+   </<ul>
+ </nav>
+**********************************************************************/
+.breadcrumb {
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: flex;
+    font-style: italic;
+    margin: 20px 0;
+    position: relative;
+    width: 100%;
+}
+.breadcrumb > .list {
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    width: 100%;
+}
+.breadcrumb > .list > .item {
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: flex;
+    font-size: 0.75em;
+    margin: 3px;
+}
+.breadcrumb > .list > .item:nth-child(n + 2)::before {
+    content: '>';
+    display: block;
+    margin: 0 7px;
+}
+.breadcrumb > .list > .item > .link {
+    color: var(--nkw-color-link);
+    display: block;
+    font-weight: bold;
+    text-decoration: underline;
+}
+

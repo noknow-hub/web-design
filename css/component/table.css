@@ -1,0 +1,153 @@
+@charset "UTF-8";
+
+@import '../foundation/style.css';
+
+
+/**********************************************************************
+ Table
+
+ [HTML]
+ <div class="table-box">
+   <table class="table">
+     <thead class="thead">
+       <tr class="tr">
+         <th class="th">THEAD</th>
+         <th class="th">THEAD</th>
+       </tr>
+     </thead>
+     <tbody class="tbody">
+       <tr class="tr">
+         <td class="td">TDATA</td>
+         <td class="td">TDATA</td>
+       </tr>
+     </tbody>
+   </table>
+   <p class="not-found">NOT FOUND</p>
+   <button class="see-more" type="button" >SEE MORE</button>
+ </div>
+**********************************************************************/
+.table-box {
+    margin: 20px;
+    width: calc(100% - 40px);
+}
+.table-box > .table {
+    border-collapse: collapse;
+    position: relative;
+    width: 100%;
+}
+.table-box > .table.scroll-x {
+    display: block;
+    overflow-x: scroll;
+    width: 300px;
+}
+.table-box > .table > .thead {
+
+}
+.table-box > .table > .tbody {
+
+}
+.table-box > .table > .thead > .tr {
+    border-bottom: 3px solid rgba(0, 0, 0, 0.1);
+}
+.table-box > .table > .tbody > .tr {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+}
+.table-box > .table.stripe > .tbody > .tr:nth-child(even) {
+    background-color: var(--nkw-table-bg-color-even);
+}
+.table-box > .table > .tbody > .tr:hover {
+    background-color: var(--nkw-table-bg-color-hover) !important;
+}
+.table-box > .table > .thead > .tr > .th,
+.table-box > .table > .thead > .tr > .td,
+.table-box > .table > .tbody > .tr > .th,
+.table-box > .table > .tbody > .tr > .td {
+    box-sizing: border-box;
+    filter: opacity(0.7);
+    padding: 5px;
+    text-align: left;
+    vertical-align: middle;
+}
+.table-box > .table.scroll-x > .thead > .tr > .th,
+.table-box > .table.scroll-x > .thead > .tr > .td,
+.table-box > .table.scroll-x > .tbody > .tr > .th,
+.table-box > .table.scroll-x > .tbody > .tr > .td {
+    white-space: nowrap;
+}
+.table-box > .table > .thead > .tr > .th,
+.table-box > .table > .tbody > .tr > .th {
+    font-weight: bold;
+}
+.table-box > .table-footer-box {
+    -webkit-align-items: center;
+    align-items: center;
+    color: var(--nkw-table-footer-box-color);
+    display: -webkit-flex;
+    display: flex;
+    font-size: 0.9em;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    margin-top: 5px;
+}
+.table-box > .table-footer-box > .per-page-box {
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: flex;
+}
+.table-box > .table-footer-box > .per-page-box > .txt {
+    
+}
+.table-box > .table-footer-box > .per-page-box > .select {
+    border: none;
+    box-sizing: border-box;
+    color: inherit;
+    font-size: 1.0em;
+    font-weight: bold;
+    margin-left: 5px;
+    padding: 5px;
+}
+.table-box > .table-footer-box > .pagination-box {
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: flex;
+}
+.table-box > .table-footer-box > .pagination-box {
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: flex;
+    margin-left: 20px;
+}
+.table-box > .table-footer-box > .pagination-box > .txt {
+
+}
+.table-box > .table-footer-box > .pagination-box > .prev,
+.table-box > .table-footer-box > .pagination-box > .next {
+    box-sizing: border-box;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: bold;
+    margin-left: 5px;
+    padding: 3px 5px;
+    transition: opacity 0.3s ease-in-out;
+}
+.table-box > .table-footer-box > .pagination-box > .prev:hover,
+.table-box > .table-footer-box > .pagination-box > .next:hover {
+    opacity: 0.4;
+}
+
+.table-box > .not-found {
+    display: none;
+    font-size: 0.8rem;
+    font-weight: bold;
+    opacity: 0.7;
+    margin: 3.0em 0;
+    text-align: center;
+    width: 100%;
+}
+.table-box > .not-found.active {
+    display: block;
+}

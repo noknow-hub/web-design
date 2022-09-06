@@ -1,0 +1,103 @@
+@charset "UTF-8";
+
+@import '../foundation/style.css';
+
+
+/**********************************************************************
+ Image Box
+
+ [HTML]
+ <div class="image-box">
+     <img alt="" class="img" src="/sample.png">
+ </div>
+
+ <div class="image-box">
+   <picture>
+     <source srcset="/sample.webp" type="image/webp">
+     <img alt="" class="img" src="/sample.png">
+   <picture>
+ </div>
+
+ <div class="image-box">
+   <video class="img" src="/sample.mp4" controls></video>
+ </div>
+
+ <div class="image-box">
+   <a class="link" href="">
+     <picture>
+       <source srcset="/sample.webp" type="image/webp">
+       <img class="img" src="/sample.jpg" alt="">
+     </picture>
+   </a>
+ </div>
+
+ <div class="image-box">
+   <figure class="figure">
+     <picture>
+       <source srcset="/sample.webp" type="image/webp">
+       <img class="img" src="/sample.jpg" alt="">
+     </picture>
+     <figcaption class="figcaption">Fig.1 - XXXX</figcaption>
+   </figure>
+ </div>
+**********************************************************************/
+.image-box {
+    height: 300px;
+    margin: 20px auto;
+    max-width: 800px;
+    overflow: hidden;
+    padding: 0;
+    width: 100%;
+}
+@media screen and (min-width: 600px) {
+    .image-box {
+        max-height: 350px;
+    }
+}
+@media screen and (min-width: 768px) {
+    .image-box {
+        max-height: 450px;
+    }
+}
+.image-box .img {
+    display: block;
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+}
+.image-box > .link {
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+.image-box > .link .img {
+    transition: all 0.3s ease-in-out;
+}
+.image-box > .link .img:hover {
+    opacity: 0.6;
+    -ms-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+.image-box > .figure,
+.image-box > .link > .figure {
+    display: block;
+    height: 100%;
+    position: relative;
+    width: 100%;
+}
+.image-box > .figure > .figcaption,
+.image-box > .link > .figure > .figcaption {
+    background-color: rgba(255, 255, 255, 0.6);
+    bottom: 5px;
+    box-sizing: border-box;
+    display: inline-block;
+    font-size: 0.6em;
+    font-weight: bold;
+    padding: 5px 10px;
+    position: absolute;
+    right: 5px;
+    text-align: right;
+    word-break: break-word;
+    z-index: 2;
+}

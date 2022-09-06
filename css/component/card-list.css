@@ -1,0 +1,200 @@
+@charset "UTF-8";
+
+@import '../foundation/style.css';
+
+
+/**********************************************************************
+ Card List
+
+ [HTML]
+ <ul class="card-list">
+   <li class="item">
+     <a class="link" href="">
+       <div class="img-box">
+         <picture>
+           <source srcset="/sample.webp" type="image/webp">
+           <img class="img" src="/sample.jpg" alt="" loading="lazy">
+         </picture>
+       </div>
+       <div class="content-box">
+         <h3 class="title">Article 1</h3>
+         <p class="excerpt">texttexttexttexttexttexttexttext...</p>
+         <time class="date" datetime="yyyy-mm-dd">2022-08-15</time>
+       </div>
+     </a>
+   </li>
+   <li class="item">
+     <a class="link" href="">
+       <div class="img-box">
+         <label class="label">Category</label>
+         <picture>
+           <source srcset="/sample.webp" type="image/webp">
+           <img class="img" src="/sample.jpg" alt="" loading="lazy">
+         </picture>
+       </div>
+       <div class="content-box">
+         <h3 class="title">Article 1</h3>
+         <p class="excerpt">texttexttexttexttexttexttexttext...</p>
+         <time class="date" datetime="yyyy-mm-dd">2022-08-15</time>
+       </div>
+     </a>
+   </li>
+ </ul>
+**********************************************************************/
+.card-list {
+    -webkit-align-items: flex-start;
+    align-items: flex-start;
+    border-radius: 7px;
+    display: -webkit-flex;
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 20px auto;
+    padding: 0;
+    transition: all 0.3s;
+    width: 100%;
+}
+.card-list > .item {
+    background-color: var(--nkw-color-light-gray);
+    display: block;
+    margin: 10px 0;
+    overflow: hidden;
+    width: 100%;
+}
+@media screen and (min-width: 600px) {
+    .card-list > .item {
+        margin: 10px;
+        width: calc(50% - 10px);
+    }
+    .card-list > .item:nth-child(odd) {
+        margin-left: 0;
+    }
+    .card-list > .item:nth-child(even) {
+        margin-right: 0;
+    }
+}
+@media screen and (min-width: 896px) {
+    .card-list > .item {
+        width: calc(33% - 40px / 3);
+    }
+    .card-list > .item:nth-child(odd) {
+        margin-left: 10px;
+    }
+    .card-list > .item:nth-child(even) {
+        margin-right: 10px;
+    }
+    .card-list > .item:nth-child(3n-2) {
+        margin-left: 0;
+    }
+    .card-list > .item:nth-child(3n) {
+        margin-right: 0;
+    }
+}
+@media screen and (min-width: 1200px) {
+    .card-list > .item {
+        width: calc(25% - 70px / 4);
+    }
+    .card-list > .item:nth-child(odd) {
+        margin-left: 10px;
+    }
+    .card-list > .item:nth-child(even) {
+        margin-right: 10px;
+    }
+    .card-list > .item:nth-child(3n-2) {
+        margin-left: 10px;
+    }
+    .card-list > .item:nth-child(3n) {
+        margin-right: 10px;
+    }
+    .card-list > .item:nth-child(4n-3) {
+        margin-left: 0;
+    }
+    .card-list > .item:nth-child(4n) {
+        margin-right: 0;
+    }
+}
+.card-list > .item > .link {
+    display: block;
+    transition: all 0.3s;
+    width: 100%;
+}
+.card-list > .item .img-box {
+    display: block;
+    height: 220px;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+@media screen and (min-width: 768px) {
+    .card-list > .item .img-box {
+        height: 200px;
+    }
+}
+.card-list > .item .img-box > .label {
+    background-color: rgba(255, 255, 255, 0.6);
+    box-sizing: border-box;
+    display: inline-block;
+    font-size: 0.7em;
+    font-weight: bold;
+    left: 5px;
+    padding: 5px 10px;
+    position: absolute;
+    top: 5px;
+    word-break: break-word;
+    z-index: 2;
+}
+.card-list > .item .img-box .img {
+    display: block;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+    width: 100%;
+}
+.card-list > .item .img-box .img.contain {
+    object-fit: contain;
+}
+.card-list > .item > .link:hover > .img-box .img {
+    -ms-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+.card-list > .item .content-box {
+    box-sizing: border-box;
+    padding: 10px;
+    width: 100%;
+}
+.card-list > .item > .link > .content-box {
+    transition: filter 0.3s ease-in-out;
+}
+.card-list > .item > .link:hover > .content-box {
+    filter: opacity(0.6);
+}
+.card-list > .item .content-box > .title {
+    font-size: 1.2em;
+    font-weight: bold;
+    line-height: 1.25;
+    margin: 0;
+    padding: 0;
+    word-break: break-word;
+}
+.card-list > .item > .link:hover > .content-box > .title {
+    text-decoration: underline;
+}
+.card-list > .item .content-box > .excerpt {
+    font-size: 0.9em;
+    line-height: 1.5;
+    margin: 5px 0 0 0;
+    opacity: 0.7;
+    padding: 0;
+    word-break: break-word;
+}
+.card-list > .item .content-box > .date {
+    display: block;
+    font-size: 0.75em;
+    font-weight: bold;
+    margin: 5px 0 0 0;
+    opacity: 0.7;
+    padding: 0;
+    text-align: right;
+    word-break: break-word;
+}

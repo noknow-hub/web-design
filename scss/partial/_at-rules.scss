@@ -1,0 +1,49 @@
+@charset "UTF-8";
+
+
+/**********************************************************************
+ Hover opacity
+**********************************************************************/
+@mixin hover-opacity($opacity) {
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+        opacity: #{$opacity};
+    }
+}
+
+
+/**********************************************************************
+ Media queries
+**********************************************************************/
+@mixin media-min-width($type) {
+    @if $type == small {
+        @media screen and (min-width: 600px) { @content; }
+    } @else if $type == medium {
+        @media screen and (min-width: 768px) { @content; }
+    } @else if $type == x-medium {
+        @media screen and (min-width: 896px) { @content; }
+    } @else if $type == large {
+        @media screen and (min-width: 1024px) { @content; }
+    } @else if $type == x-large {
+        @media screen and (min-width: 1200px) { @content; }
+    }
+}
+@mixin media-max-width($type) {
+    @if $type == small {
+        @media screen and (max-width: 588px) { @content; }
+    } @else if $type == medium {
+        @media screen and (max-width: 767px) { @content; }
+    } @else if $type == x-medium {
+        @media screen and (max-width: 895px) { @content; }
+    } @else if $type == large {
+        @media screen and (max-width: 1023px) { @content; }
+    } @else if $type == x-large {
+        @media screen and (max-width: 1199px) { @content; }
+    }
+}
+
+
+
+
+

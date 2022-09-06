@@ -1,0 +1,211 @@
+@charset "UTF-8";
+
+@import '../foundation/style.css';
+
+
+/**********************************************************************
+ Pricing ox
+
+ [HTML]
+
+
+**********************************************************************/
+.pricing-box {
+    -webkit-align-items: flex-start;
+    align-items: flex-start;
+    display: -webkit-flex;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px auto;
+    padding: 0;
+    width: 100%;
+}
+.pricing-box > .item {
+    background-color: var(--nkw-pricing-box-item-background-color);
+    box-sizing: border-box;
+    margin: 10px;
+    padding: 0;
+    width: 100%;
+}
+@media screen and (min-width: 600px) {
+    .pricing-box > .item {
+        width: calc(50% - 20px);
+    }
+}
+@media screen and (min-width: 768px) {
+    .pricing-box > .item {
+        width: calc(33% - 20px);
+    }
+}
+@media screen and (min-width: 1024px) {
+    .pricing-box > .item {
+        width: calc(25% - 20px);
+    }
+    .pricing-box > .item.max-3-cols {
+        width: calc(33% - 20px);
+    }
+}
+.pricing-box > .item > .img-box {
+    height: 170px;
+    width: 100%;
+}
+@media screen and (min-width: 600px) {
+    .pricing-box > .item > .img-box {
+        height: 150px;
+    }
+}
+.pricing-box > .item > .content-box {
+    box-sizing: border-box;
+    padding: 20px;
+}
+.pricing-box > .item > .content-box > .title {
+    font-size: 1.5em;
+    font-weight: bold;
+    line-height: 1.0;
+    margin-top: 10px;
+    text-align: center;
+}
+.pricing-box > .item > .content-box > .price-box {
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: flex;
+    font-weight: bold;
+    -webkit-justify-content: center;
+    justify-content: center;
+    margin-top: 15px;
+    position: relative;
+}
+.pricing-box > .item > .content-box > .price-box > .currency {
+    left: 10px;
+    position: relative;
+    top: -30px;
+    white-space: nowrap;
+}
+.pricing-box > .item > .content-box > .price-box > .amount {
+    font-size: 3.0em;
+    margin: auto 5px;
+
+}
+.pricing-box > .item > .content-box > .price-box > .per {
+    left: -10px;
+    position: relative;
+    top: 30px;
+    white-space: nowrap;
+}
+.pricing-box > .item > .content-box > .description {
+    font-size: 1.0em;
+    line-height: 2.0;
+    margin-top: 20px;
+    opacity: 0.8;
+    word-break: break-word;
+}
+@media screen and (min-width: 600px) {
+    .pricing-box > .item > .content-box > .description {
+        font-size: 0.75em;
+    }
+}
+.pricing-box > .item > .content-box > .list {
+    box-sizing: border-box;
+    margin-top: 30px;
+    padding: 30px 10px 10px 10px;
+    position: relative;
+}
+.pricing-box > .item > .content-box > .list::before {
+    background-color: rgba(0, 0, 0, 0.05);
+    content: '';
+    height: 3px;
+    left: 10%;
+    position: absolute;
+    top: 0;
+    width: 80%;
+}
+.pricing-box > .item > .content-box > .list > .item {
+    -webkit-align-items: flex-start;
+    align-items: flex-start;
+    display: -webkit-flex;
+    display: flex;
+    font-size: 1.0em;
+    line-height: 24px;
+    margin-bottom: 10px;
+    position: relative;
+}
+@media screen and (min-width: 600px) {
+    .pricing-box > .item > .content-box > .list > .item {
+        font-size: 0.8em;
+    }
+}
+.pricing-box > .item > .content-box > .list > .item:last-child {
+    margin-bottom: 0;
+}
+.pricing-box > .item > .content-box > .list > .item.check,
+.pricing-box > .item > .content-box > .list > .item.uncheck {
+    padding-left: 25px;
+}
+.pricing-box > .item > .content-box > .list > .item.uncheck {
+    opacity: 0.4;
+}
+.pricing-box > .item > .content-box > .list > .item.check::before,
+.pricing-box > .item > .content-box > .list > .item.uncheck::before {
+    background-color: #28a745;
+    border-radius: 50%;
+    content: '';
+    height: 20px;
+    left: 0;
+    position: absolute;
+    top: 2px;
+    width: 20px;
+}
+.pricing-box > .item > .content-box > .list > .item.uncheck::before {
+    background-color: #bdbdbd;
+}
+.pricing-box > .item > .content-box > .list > .item.check::after,
+.pricing-box > .item > .content-box > .list > .item.uncheck::after {
+    border-bottom: 3px solid #ffffff;
+    border-right: 3px solid #ffffff;
+    content: '';
+    height: 9px;
+    left: 6px;
+    position: absolute;
+    top: 4.5px;
+    width: 5px;
+    transform: rotate(45deg);
+}
+.pricing-box > .item > .content-box > .submit {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    align-items: center;
+    background-color: inherit;
+    border: 1px solid var(--nkw-color-success);
+    box-sizing: border-box;
+    color: var(--nkw-color-success);
+    cursor: pointer;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -webkit-flexbox;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    fill: var(--nkw-color-success);
+    font-weight: bold;
+    -webkit-justify-content: center;
+    justify-content: center;
+    margin: 20px auto auto;
+    padding: 10px 20px;
+    transition: opacity 0.3s ease-in-out;
+}
+.pricing-box > .item > .content-box > .submit.fill {
+    background-color: var(--nkw-color-success);
+    color: #ffffff;
+}
+.pricing-box > .item > .content-box > .submit:hover {
+    opacity: 0.4;
+}
+.pricing-box > .item > .content-box > .submit:disabled:hover {
+    cursor: default;
+    opacity: unset;
+}
+
+

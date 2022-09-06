@@ -1,0 +1,138 @@
+@charset "UTF-8";
+
+
+:root {
+    --nkw-neumorphism-bg-color-theme-light: rgb(242, 242, 242);
+    --nkw-neumorphism-bg-color-theme-dark: #000;
+    --nkw-neumorphism-border-light: 1px solid rgb(240, 240, 240);
+    --nkw-neumorphism-border-radius: 7px;
+    --nkw-neumorphism-box-shadow-light: 6px 6px 12px rgb(210, 210, 210), -6px -6px 12px #fff, inset 3px 3px 6px transparent, inset -3px -3px 6px transparent;
+    --nkw-neumorphism-box-shadow-inset-light: 6px 6px 12px transparent, -6px -6px 12px transparent, inset 3px 3px 6px rgb(210, 210, 210), inset -3px -3px 6px #fff;
+    --nkw-neumorphism-box-shadow-hover-off-light: inset 3px 3px 6px transparent, inset -3px -3px 6px transparent;
+    --nkw-neumorphism-box-shadow-hover-on-light: inset 3px 3px 6px rgb(210, 210, 210), inset -3px -3px 6px #fff;
+    --nkw-neumorphism-color-theme-light: rgb(64, 64, 64);
+    --nkw-neumorphism-color-theme-dark: #000;
+    --nkw-neumorphism-color-success: #28a745;
+    --nkw-neumorphism-color-error: #dc3545;
+    --nkw-neumorphism-color-warning: #ffc107;
+    --nkw-neumorphism-color-info: #17a2b8;
+    --nkw-neumorphism-color-light: #e8eaed;
+    --nkw-neumorphism-color-dark: #212529;
+    --nkw-neumorphism-color-link: #007bff;
+    --nkw-neumorphism-color-muted: #6c757d;
+    --nkw-neumorphism-color-note: #e66572;
+    --nkw-neumorphism-color-add: #28a745;
+    --nkw-neumorphism-color-update: #ffc107;
+    --nkw-neumorphism-color-delete: #dc3545;
+    --nkw-neumorphism-icon-size-x-large: 32px;
+    --nkw-neumorphism-icon-size-large: 28px;
+    --nkw-neumorphism-icon-size-medium: 24px;
+    --nkw-neumorphism-icon-size-small: 20px;
+    --nkw-neumorphism-icon-size-x-small: 16px;
+    --nkw-neumorphism-side-menu-box-font-size-list-title: 0.9rem;
+    --nkw-neumorphism-side-menu-box-font-size-list-item: 0.8rem;
+    --nkw-neumorphism-side-menu-box-height: 36px;
+    --nkw-neumorphism-side-menu-box-background-color-hover-item: #e8e8e8;
+    --nkw-neumorphism-side-menu-box-border-sub-list: 3px solid #6c757d;
+}
+
+
+/**********************************************************************
+ body
+**********************************************************************/
+.body {
+    background-color: var(--nkw-neumorphism-bg-color-theme-light);
+    color: var(--nkw-neumorphism-color-theme-light);
+    fill: var(--nkw-neumorphism-color-theme-light);
+}
+html[data-theme="light"] .body {
+    background-color: var(--nkw-neumorphism-bg-color-theme-light);
+    color: var(--nkw-neumorphism-color-theme-light);
+    fill: var(--nkw-neumorphism-color-theme-light);
+}
+html[data-theme="dark"] .body {
+    background-color: var(--nkw-neumorphism-bg-color-theme-dark);
+    color: var(--nkw-neumorphism-color-theme-dark);
+    fill: var(--nkw-neumorphism-color-theme-dark);
+}
+
+
+/**********************************************************************
+ border-radius
+**********************************************************************/
+.border-radius {
+    border-radius: var(--nkw-neumorphism-border-radius);
+}
+
+
+/**********************************************************************
+ button
+**********************************************************************/
+.button {
+    background-color: var(--nkw-neumorphism-bg-color-theme-light);
+    border: var(--nkw-neumorphism-border-light);
+    border-radius: var(--nkw-neumorphism-border-radius);
+    box-shadow: var(--nkw-neumorphism-box-shadow-light);
+    color: var(--nkw-neumorphism-color-theme-light);
+    fill: var(--nkw-neumorphism-color-theme-light);
+}
+.button:hover {
+    box-shadow: var(--nkw-neumorphism-box-shadow-inset-light);
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+
+/**********************************************************************
+ Color
+**********************************************************************/
+.color-add {
+    color: var(--nkw-neumorphism-color-add);
+    fill: var(--nkw-neumorphism-color-add);
+}
+.color-delete {
+    color: var(--nkw-neumorphism-color-delete);
+    fill: var(--nkw-neumorphism-color-delete);
+}
+.color-update {
+    color: var(--nkw-neumorphism-color-update);
+    fill: var(--nkw-neumorphism-color-update);
+}
+.color-info {
+    color: var(--nkw-neumorphism-color-info);
+    fill: var(--nkw-neumorphism-color-info);
+}
+.color-success {
+    color: var(--nkw-neumorphism-color-success);
+    fill: var(--nkw-neumorphism-color-success);
+}
+.color-error {
+    color: var(--nkw-neumorphism-color-error);
+    fill: var(--nkw-neumorphism-color-error);
+}
+.color-warning {
+    color: var(--nkw-neumorphism-color-warning);
+    fill: var(--nkw-neumorphism-color-warning);
+}
+.color-light {
+    color: var(--nkw-neumorphism-color-light);
+    fill: var(--nkw-neumorphism-color-light);
+}
+.color-dark {
+    color: var(--nkw-neumorphism-color-dark);
+    fill: var(--nkw-neumorphism-color-dark);
+}
+.color-link {
+    color: var(--nkw-neumorphism-color-link);
+    fill: var(--nkw-neumorphism-color-link);
+}
+.color-muted {
+    color: var(--nkw-neumorphism-color-muted);
+    fill: var(--nkw-neumorphism-color-muted);
+}
+.color-note {
+    color: var(--nkw-neumorphism-color-note);
+    fill: var(--nkw-neumorphism-color-note);
+}
+
+
+

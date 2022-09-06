@@ -1,0 +1,146 @@
+@charset "UTF-8";
+
+@import '../foundation/style.css';
+
+
+/**********************************************************************
+ Horizontal List
+
+ [HTML]
+ <ul class="horizontal-list">
+   <li class="item">
+     <div class="img-box">
+       <a class="link" href="">
+         <picture>
+           <source srcset="/sample.webp" type="image/webp">
+           <img class="img" src="/sample.png" alt="" loading="lazy">
+         </picture>
+       </a>
+     </div>
+     <div class="content-box">
+       <a class="link" href="">
+         <h3 class="title">Article Title</h3>
+       </a>
+       <div class="attr-box">
+         <time class="date" datetime="yyyy-mm-dd">2022-08-15</time>
+         <span class="tag">TAG1</span>
+         <span class="tag">TAG2</span>
+       </div>
+       <p class="excerpt">text...</p>
+     </div>
+   </li>
+ </ul>
+**********************************************************************/
+.horizontal-list {
+    margin: 20px auto;
+    padding: 0;
+    width: 100%;
+}
+.horizontal-list > .item {
+    background-color: var(--nkw-color-light-gray);
+    border-top: 1px solid var(--nkw-color-light-gray);
+    box-sizing: border-box;
+    display: -webkit-flex;
+    display: flex;
+    padding: 20px 0;
+}
+.horizontal-list > .item:first-child {
+    border-top: none;
+}
+.horizontal-list > .item > .img-box {
+    box-sizing: border-box;
+    height: auto;
+    overflow: hidden;
+    width: 100px;
+}
+@media screen and (min-width: 600px) {
+    .horizontal-list > .item > .img-box {
+        width: 170px;
+    }
+}
+.horizontal-list > .item > .img-box > .link {
+    display: inline-block;
+    height: 100%;
+    overflow: hidden;
+    width: 100%;
+}
+.horizontal-list > .item > .img-box .img {
+    display: block;
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+}
+.horizontal-list > .item > .img-box .img.contain {
+    object-fit: contain;
+}
+.horizontal-list > .item > .img-box > .link .img {
+    transition: filter, transform 0.3s ease-in-out;
+}
+.horizontal-list > .item > .img-box > .link .img:hover {
+    opacity: 0.6;
+    -ms-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+.horizontal-list > .item > .content-box {
+    box-sizing: border-box;
+    flex: 1 1;
+    padding: 10px;
+}
+.horizontal-list > .item > .content-box > .link {
+    display: inline-block;
+    width: 100%;
+}
+.horizontal-list > .item > .content-box > .title,
+.horizontal-list > .item > .content-box > .link > .title {
+    font-size: 1.15em;
+    font-weight: bold;
+    line-height: 1.25;
+    text-decoration: underline;
+    word-break: break-word;
+}
+.horizontal-list > .item > .content-box > .link > .title {
+    color: var(--nkw-color-link);
+    transition: opacity 0.3s ease-in-out;
+}
+.horizontal-list > .item > .content-box > .link > .title:hover {
+    opacity: 0.6;
+}
+.horizontal-list > .item > .content-box > .excerpt,
+.horizontal-list > .item > .content-box > .link > .excerpt {
+    font-size: 0.9em;
+    margin-top: 5px;
+    opacity: 0.8;
+    word-break: break-word;
+}
+.horizontal-list > .item > .content-box > .attr-box,
+.horizontal-list > .item > .content-box > .link > .attr-box {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: flex;
+}
+.horizontal-list > .item > .content-box > .attr-box > .date,
+.horizontal-list > .item > .content-box > .link > .attr-box > .date {
+    font-size: 0.8em;
+    margin-left: 5px;
+    opacity: 0.6;
+}
+.horizontal-list > .item > .content-box > .attr-box > .tag,
+.horizontal-list > .item > .content-box > .link > .attr-box > .tag {
+    background-color: var(--nkw-color-dark-gray);
+    box-sizing: border-box;
+    color: #fff;
+    font-size: 0.7em;
+    line-height: 1.0;
+    margin-left: 5px;
+    opacity: 0.6;
+    padding: 3px 6px;
+}
+.horizontal-list > .item > .content-box > .attr-box > *:first-child,
+.horizontal-list > .item > .content-box > .link > .attr-box > *:first-child {
+    margin-left: 0;
+}

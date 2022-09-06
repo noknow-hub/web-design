@@ -1,0 +1,51 @@
+@charset "UTF-8";
+
+@import '../foundation/style.css';
+
+
+/**********************************************************************
+ Console box
+
+ [HTML]
+ <div class="console-box">
+   <span class="title"></span>
+   <pre class="console"><code class="code"></code></pre>
+ </div>
+**********************************************************************/
+.console-box {
+    background-color: var(--nkw-console-background-color);
+    border: var(--nkw-console-border);
+    box-sizing: border-box;
+    margin: 20px 0;
+    padding: 10px;
+    width: 100%;
+}
+.console-box > .title {
+    box-sizing: border-box;
+    color: var(--nkw-color-gray);
+    display: inline-block;
+    font-size: 0.9em;
+    line-height: normal;
+    margin-bottom: 10px;
+    padding: 5px 10px;
+}
+.console-box > .console {
+    font-family: Consolas, Menlo, 'Liberation Mono', Courier, Monaco, monospace;
+    font-size: 0.85em;
+    line-height: 1.5;
+    white-space: pre-wrap;
+    word-break: break-all;
+}
+@media screen and (min-width: 768px) {
+    .console-box > .console {
+        font-size: 0.75em;
+    }
+}
+.console-box > .console > .code {
+    display: block;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    white-space: pre-wrap;
+    word-break: break-all;
+}

@@ -1,0 +1,35 @@
+@charset "UTF-8";
+
+
+/**********************************************************************
+ .layout-two-cols
+**********************************************************************/
+.layout-two-cols {
+    display: -webkit-flex;
+    display: flex;
+    position: relative;
+    width: 100%;
+}
+.layout-two-cols > .layout-two-cols-side {
+    box-sizing: border-box;
+    flex: 0 0 0;
+    max-height: calc(100vh - 50px);
+    overflow-y: scroll;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 20px;
+    z-index: 1;
+    transition: all 0.3s ease-in-out;
+}
+@media screen and (min-width: 1200px) {
+    .layout-two-cols > .layout-two-cols-side {
+        flex-basis: 360px;
+    }
+}
+.layout-two-cols > .layout-two-cols-content {
+    flex: 1 1;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+    z-index: 2;
+}
+

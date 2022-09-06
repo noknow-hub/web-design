@@ -1,0 +1,136 @@
+@charset "UTF-8";
+
+@import '../foundation/style.css';
+
+
+/**********************************************************************
+ Form
+
+ [HTML]
+ <div class="form-group">
+   <label class="label"></label>
+   <input class="input" name="" type="">
+   <p class="note color-error active"></p>
+ </div>
+ <div class="form-group-box">
+   <label class="form-group-box--label"></label>
+   <select class="form-group-box--select" name="">
+     <option value=""></option>
+     <option value=""></option>
+   </select>
+   <p class="form-group-box--note color-error [active]"></p>
+ </div>
+ <div class="form-group-box">
+   <label class="form-group-box--label"></label>
+   <div class="form-group-box--icon-input-box">
+     <input class="form-group-box--input" name="" type="">
+     <svg class="form-group-box--icon-input-box--post-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"></svg>
+   </div>
+ </div>
+ <div class="form-group-box">
+   <label class="form-group-box--label"></label>
+   <div class="form-group-box--icon-input-box">
+     <svg class="form-group-box--icon-input-box--pre-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"></svg>
+     <input class="form-group-box--input" name="" type="">
+   </div>
+ </div>
+**********************************************************************/
+.form-group {
+    margin: 10px 5px;
+    position: relative;
+    width: calc(100% - 10px);
+}
+.form-group.inline {
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: flex;
+    flex-wrap: wrap;
+}
+.form-group > .label {
+    box-sizing: border-box;
+    display: inline-block;
+    font-family: inherit;
+    font-size: 0.7em;
+    margin-bottom: 5px;
+}
+.form-group > .form-group-check {
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: flex;
+    flex-wrap: wrap;
+}
+.form-group > .form-group-check > .form-group-check-item > .label {
+    font-size: 1.0em;
+}
+.form-group > .form-group-check > .form-group-check-item {
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: flex;
+    margin-right: 20px;
+}
+.form-group > .form-group-check > .form-group-check-item:last-child {
+    margin-right: 0;
+}
+.form-group.inline > .label {
+    flex: 0 1 20%;
+}
+.form-group > .note {
+    display: none;
+    font-size: 0.7em;
+    margin-top: 5px;
+    width: 100%;
+    word-break: break-all;
+}
+.form-group > .note.active {
+    display: inline-block;
+}
+.form-group .input,
+.form-group .select,
+.form-group .textarea {
+    border: 1px solid var(--nkw-color-form-border);
+    box-sizing: border-box;
+    font-size: 1.0em;
+    height: 50px;
+    margin: 0;
+    outline: none;
+    padding: 10px;
+    width: 100%;
+}
+.form-group .textarea {
+    height: auto;
+    min-height: 7.0em;
+    resize: vertical;
+}
+.form-group .input[type="radio"],
+.form-group .input[type="checkbox"] {
+    height: unset;
+    margin: 0 5px;
+    vertical-align: middle;
+    width: unset;
+}
+.form-group.inline > .input,
+.form-group.inline > .form-group-check,
+.form-group.inline > .input-group {
+    flex: 1 1 80%;
+}
+.form-group .input-group {
+    -webkit-align-items: center;
+    align-items: center;
+    border: 1px solid var(--nkw-color-form-border);
+    box-sizing: border-box;
+    display: -webkit-flex;
+    display: flex;
+}
+.form-group .input-group > .input {
+    border: none;
+}
+.form-group .input-group > .icon {
+    fill: var(--nkw-color-form-icon);
+    height: var(--nkw-icon-size-medium);
+    padding: 0 10px;
+    width: var(--nkw-icon-size-medium);
+}
+

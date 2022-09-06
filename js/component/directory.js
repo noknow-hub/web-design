@@ -1,0 +1,40 @@
+//////////////////////////////////////////////////////////////////////
+// directory.js
+//////////////////////////////////////////////////////////////////////
+class Directory {
+
+    //////////////////////////////////////////////////////////////////////
+    // Constructor.
+    //////////////////////////////////////////////////////////////////////
+    constructor() {
+        this.classNameDirectory = 'directory';
+        this.classNameContent = 'content';
+        this.classNameItem = 'item';
+        this.classNameDropDown = 'drop-down';
+        this.classNameActive = 'active';
+        this.classNameSubList = 'sub-list';
+    }
+
+
+    //////////////////////////////////////////////////////////////////////
+    // Run.
+    //////////////////////////////////////////////////////////////////////
+    Run() {
+        this.setUpForDropDown();
+    }
+
+
+    //////////////////////////////////////////////////////////////////////
+    // Set up for drop-down
+    //////////////////////////////////////////////////////////////////////
+    setUpForDropDown() {
+        const elms = document.querySelectorAll(`.${this.classNameDirectory} .${this.classNameItem}.${this.classNameDropDown}`);
+        for(let i = 0; i < elms.length; i++) {
+            elms[i].addEventListener('click', () => {
+                elms[i].classList.toggle(this.classNameActive);
+            });
+        }
+    }
+
+}
+export { Directory };

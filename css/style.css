@@ -1,0 +1,6 @@
+@charset "UTF-8";
+
+@import './partial/reset.css';
+@import './partial/common.css';
+@import './partial/layout.css';
+@import './partial/component.css';

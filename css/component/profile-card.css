@@ -1,0 +1,152 @@
+@charset "UTF-8";
+
+@import '../foundation/style.css';
+
+
+/**********************************************************************
+ Profile card box
+
+ [HTML]
+ <div class="profile-card-box [round] [wrap]">
+   <div class="img-header-box">
+     <img class="img" alt="profile" src="/img/profile" loading="lazy">
+   </div>
+   <div class="content-box">
+     <p class="name"></p>
+     <p class="profession"></p>
+     <p class="bio"></p>
+     <div class="sns-box">
+       <a class="sns-icon-link" href="https://www.facebook.com/noknowkakerusato" target="_blank">
+         <svg class="icon color-sns-facebook" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><use xlink:href="/img/icon/icons.svg#facebook"/></svg>
+       </a>
+       <a class="sns-icon-link color-sns-twitter" href="https://twitter.com/noknow80094321" target="_blank">
+         <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><use xlink:href="/img/icon/icons.svg#twitter"/></svg>
+       </a>
+       <a class="sns-icon-link .color-sns-instagram" href="https://www.instagram.com/noknow.info/" target="_blank">
+         <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><use xlink:href="/img/icon/icons.svg#instagram"/></svg>
+       </a>
+       <a class="sns-icon-link color-sns-reddit" href="https://www.reddit.com/user/we_are_noknow" target="_blank">
+         <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><use xlink:href="/img/icon/icons.svg#reddit"/></svg>
+       </a>
+     </div>
+   </div>
+ </div>
+**********************************************************************/
+.profile-card-box {
+    margin: 20px auto;
+    padding: 0;
+    position: relative;
+    width: calc(100% - 40px);
+}
+@media screen and (min-width: 600px) {
+    .profile-card-box.wrap {
+        display: -webkit-flex;
+        display: flex;
+        height: 300px;
+    }
+}
+.profile-card-box > .img-header-box {
+    height: 150px;
+    margin: auto;
+    position: relative;
+    width: 100%;
+    z-index: 1;
+}
+.profile-card-box.round > .img-header-box {
+    border-top-right-radius: var(--nkw-border-radius);
+    border-top-left-radius: var(--nkw-border-radius);
+    box-sizing: border-box;
+    overflow: hidden;
+}
+@media screen and (min-width: 600px) {
+    .profile-card-box.wrap > .img-header-box {
+        height: 100%;
+    }
+    .profile-card-box.wrap.round > .img-header-box {
+        border-top-right-radius: unset;
+        border-bottom-left-radius: var(--nkw-border-radius);
+    }
+}
+.profile-card-box.wrap > .img-header-box > .img,
+.profile-card-box.wrap > .img-header-box > picture > .img {
+    display: block;
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+}
+.profile-card-box > .content-box {
+    background-color: var(--nkw-color-light-gray);
+    box-sizing: border-box;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    z-index: 1;
+}
+.profile-card-box.round > .content-box {
+    border-bottom-left-radius: var(--nkw-border-radius);
+    border-bottom-right-radius: var(--nkw-border-radius);
+    overflow: hidden;
+}
+@media screen and (min-width: 600px) {
+    .profile-card-box.wrap > .content-box {
+        display: -webkit-flex;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        -webkit-justify-content: center;
+        justify-content: center;
+        padding-top: unset;
+    }
+}
+.profile-card-box.wrap.round > .content-box {
+    border-bottom-left-radius: unset;
+    border-top-right-radius: var(--nkw-border-radius);
+}
+.profile-card-box > .content-box > .name {
+    color: inherit;
+    font-weight: bold;
+    margin: 10px;
+    text-align: center;
+    word-break: break-word;
+}
+.profile-card-box > .content-box > .profession {
+    color: inherit;
+    font-weight: bold;
+    margin: 10px;
+    text-align: center;
+    word-break: break-word;
+}
+.profile-card-box > .content-box > .bio {
+    color: inherit;
+    filter: opacity(0.6);
+    line-height: 1.25;
+    margin: 10px;
+    text-align: center;
+    word-break: break-word;
+}
+.profile-card-box > .content-box > .sns-box {
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: flex;
+    flex-wrap: wrap;
+    -webkit-justify-content: center;
+    justify-content: center;
+    margin: 10px;
+}
+.profile-card-box > .content-box > .sns-box > .sns-icon-link {
+    background-color: inherit;
+    box-sizing: border-box;
+    padding: 10px;
+}
+.profile-card-box > .content-box > .sns-box > .sns-icon-link > .icon {
+    display: block;
+    fill: inherit;
+    height: var(--nkw-icon-size-medium);
+    transition: all 0.3s;
+    width: var(--nkw-icon-size-medium);
+}
+.profile-card-box > .content-box > .sns-box > .sns-icon-link:hover > .icon {
+    opacity: 0.3;
+}

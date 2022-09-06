@@ -1,0 +1,168 @@
+@charset "UTF-8";
+
+@import '../foundation/style.css';
+
+
+/**********************************************************************
+ Directory
+
+ [HTML]
+ <nav class="directory">
+   <ul class="list">
+     <li class="item heading">
+       <a class="link" href="">
+         <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><use xlink:href="/icons.svg#home"/></svg>
+         <p class="content">LINK</p>
+       </a>
+     </li>
+     <li class="item heading drop-down active">
+       <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><use xlink:href="/icons.svg#home"/></svg>
+       <p class="content">TITLE</p>
+       <svg class="icon rotate" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><use xlink:href="/icons.svg#arrowDown"/></svg>
+     </li>
+     <ul class="sub-list">
+       <li class="item">
+         <a class="link" href="">
+           <p class="content">LINK<small class="color-muted font-size-x-small margin-left-x-small">TAG</small></p>
+         </a>
+       </li>
+       <li class="item">
+         <a class="content link" href="">LINK</a>
+       </li>
+       <li class="item drop-down active">
+         <p class="content">TITLE</span></p>
+         <svg class="icon rotate" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><use xlink:href="//icons.svg#arrowDown"/></svg>
+       </li>
+       <ul class="sub-list">
+         <li class="item">
+           <a class="content link" href="">LINK</a>
+         </li>
+         <li class="item">
+           <p class="content">TITLE</span></p>
+         </li>
+         <ul class="sub-list">
+           <li class="item">
+             <a class="content link" href="">LINK</a>
+           </li>
+         </ul>
+       </ul>
+     </ul>
+     <li class="item heading">
+       <a class="link" href="">
+         <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><use xlink:href="/icons.svg#home"/></svg>
+         <span class="content">LINK</span>
+       </a>
+     </li>
+   </ul>
+ </nav>
+**********************************************************************/
+.directory {
+    background-color: var(--nkw-color-light-gray);
+    box-sizing: border-box;
+    margin: 20px auto;
+    padding: 10px;
+    width: calc(100% - 40px);
+}
+@media screen and (min-width: 600px) {
+    .directory {
+        padding: 20px;
+    }
+}
+.directory > .list,
+.directory .sub-list {
+    box-sizing: border-box;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+.directory .sub-list {
+    border-left: 3px solid var(--nkw-color-muted);
+    list-style-type: none;
+    margin-left: 10px;
+    overflow: hidden;
+    width: calc(100% - 10px);
+}
+.directory > .list > .item.drop-down + .sub-list,
+.directory .sub-list > .item.drop-down + .sub-list {
+    height: 0;
+    overflow: hidden;
+}
+.directory > .list > .item.drop-down.active + .sub-list,
+.directory .sub-list > .item.drop-down.active + .sub-list {
+    height: auto;
+}
+.directory > .list > .item,
+.directory .sub-list > .item {
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: flex;
+    min-height: 40px;
+}
+.directory > .list > .item.drop-down,
+.directory .sub-list > .item.drop-down {
+    cursor: pointer;
+}
+.directory > .list > .item > .content,
+.directory .sub-list > .item > .content,
+.directory > .list > .item > .link > .content,
+.directory .sub-list > .item > .link > .content {
+    box-sizing: border-box;
+    font-size: 0.95em;
+    line-height: 1.5;
+    margin: 0;
+    padding: 7px;
+    width: 100%;
+}
+.directory > .list > .item > .link,
+.directory .sub-list > .item > .link {
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: flex;
+    text-decoration: none;
+    transition: opacity 0.3s ease-in-out;
+    width: 100%;
+}
+.directory > .list > .item > .link:hover,
+.directory .sub-list > .item > .link:hover {
+    opacity: 0.3;
+}
+.directory > .list > .item.heading,
+.directory .sub-list > .item.heading {
+    font-size: 1.0em;
+    font-weight: bold;
+    margin-top: 10px;
+}
+.directory > .list > .item.heading:first-child,
+.directory .sub-list > .item.heading:first-child {
+    margin-top: 0;
+}
+.directory > .list > .item > .icon,
+.directory .sub-list > .item > .icon,
+.directory > .list > .item > .link > .icon,
+.directory .sub-list > .item > .link > .icon {
+    fill: inherit;
+    height: var(--nkw-icon-size-medium);
+    margin: 0;
+    min-width: var(--nkw-icon-size-medium);
+    width: var(--nkw-icon-size-medium);
+}
+.directory > .list > .item.drop-down > .icon.rotate,
+.directory .sub-list > .item.drop-down > .icon.rotate,
+.directory > .list > .item.drop-down > .link > .icon.rotate,
+.directory .sub-list > .item.drop-down > .link > .icon.rotate {
+    -o-transform: rotateX(0);
+    -webkit-transform: rotateX(0);
+    transform: rotateX(0);
+    transition: transform 0.3s ease-in-out;
+}
+.directory > .list > .item.drop-down.active > .icon.rotate,
+.directory .sub-list > .item.drop-down.active > .icon.rotate,
+.directory > .list > .item.drop-down.active > .link > .icon.rotate,
+.directory .sub-list > .item.drop-down.active > .link > .icon.rotate {
+    -o-transform: rotateX(180deg);
+    -webkit-transform: rotateX(180deg);
+    transform: rotateX(180deg);
+}
