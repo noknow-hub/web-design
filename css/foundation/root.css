@@ -36,7 +36,7 @@
     --nkw-console-background-color: #f8f8f8;
     --nkw-console-border: 1px solid #c6c8ca;
     --nkw-font-family-gothic: "Helvetica Neue", "Helvetica", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Arial", "Yu Gothic", "Meiryo", sans-serif;
-    --nkw-font-family-mincho: font-family: "Times New Roman", "YuMincho", "Hiragino Mincho ProN", "Yu Mincho", "MS PMincho", serif;
+    --nkw-font-family-mincho: "Times New Roman", "YuMincho", "Hiragino Mincho ProN", "Yu Mincho", "MS PMincho", serif;
     --nkw-font-size: clamp(16px, 2vw, 20px);      /* 16px */
     --nkw-header-height: 50px;
     --nkw-h1-font-size: clamp(30px, 4vw, 38px);   /* 34px */
