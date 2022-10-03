@@ -7,7 +7,7 @@
  Card List
 
  [HTML]
- <ul class="card-list">
+ <ul class="card-list [max-3-cols]">
    <li class="item">
      <a class="link" href="">
        <div class="img-box">
@@ -91,25 +91,25 @@
     }
 }
 @media screen and (min-width: 1200px) {
-    .card-list > .item {
+    .card-list:not(.max-3-cols) > .item {
         width: calc(25% - 70px / 4);
     }
-    .card-list > .item:nth-child(odd) {
+    .card-list:not(.max-3-cols) > .item:nth-child(odd) {
         margin-left: 10px;
     }
-    .card-list > .item:nth-child(even) {
+    .card-list:not(.max-3-cols) > .item:nth-child(even) {
         margin-right: 10px;
     }
-    .card-list > .item:nth-child(3n-2) {
+    .card-list:not(.max-3-cols) > .item:nth-child(3n-2) {
         margin-left: 10px;
     }
-    .card-list > .item:nth-child(3n) {
+    .card-list:not(.max-3-cols) > .item:nth-child(3n) {
         margin-right: 10px;
     }
-    .card-list > .item:nth-child(4n-3) {
+    .card-list:not(.max-3-cols) > .item:nth-child(4n-3) {
         margin-left: 0;
     }
-    .card-list > .item:nth-child(4n) {
+    .card-list:not(.max-3-cols) > .item:nth-child(4n) {
         margin-right: 0;
     }
 }

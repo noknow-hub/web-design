@@ -23,13 +23,17 @@
 }
 @media screen and (min-width: 1200px) {
     .layout-two-cols > .layout-two-cols-side {
-        flex-basis: 360px;
+        flex-basis: 30vw;
     }
 }
 .layout-two-cols > .layout-two-cols-content {
-    flex: 1 1;
+    flex: 1 1 100vw;
     position: relative;
     transition: all 0.3s ease-in-out;
     z-index: 2;
 }
-
+@media screen and (min-width: 1200px) {
+    .layout-two-cols > .layout-two-cols-content {
+        flex-basis: 70vw;
+    }
+}

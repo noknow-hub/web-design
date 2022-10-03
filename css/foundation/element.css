@@ -2,80 +2,11 @@
 
 
 /**********************************************************************
- article
+ a
 **********************************************************************/
-.article h1 {
-    font-size: var(--nkw-h1-font-size);
-    margin: 50px 0;
-}
-.article h2 {
-    font-size: var(--nkw-h2-font-size);
-    margin: 120px 0 20px;
-}
-.article h3 {
-    font-size: var(--nkw-h3-font-size);
-    margin: 60px 0 20px;
-}
-.article h4 {
-    font-size: var(--nkw-h4-font-size);
-    margin: 40px 0 20px;
-}
-.article ul,
-.article ol {
-    margin: 20px 0 40px 40px;
-}
-.article ul {
-    list-style-type: disc;
-}
-.article ul ul {
-    list-style-type: circle;
-    margin: 0 0 0 40px;
-}
-.article ul ul ul {
-    list-style-type: square;
-}
-.article ol {
-    list-style-type: decimal;
-}
-.article p {
-    line-height: var(--nkw-line-height-large);
-    margin-bottom: 40px;
-}
-.article * > p:last-child {
-    margin-bottom: unset;
-}
-.article a {
+.a {
+    color: var(--nkw-color-link);
     text-decoration: underline;
-    transition: opacity 0.3s ease-in-out;
-}
-.article a.button {
-    text-decoration: unset;
-    transition: box-shadow 0.3s ease-in-out;
-}
-.article a:hover {
-    opacity: 0.3;
-}
-.article a.button:hover {
-    opacity: unset;
-}
-.article strong {
-    color: var(--nkw-color-note);
-}
-.article img {
-    display: block;
-    max-height: 300px;
-    object-fit: contain;
-    width: 100%;
-}
-@media screen and (min-width: 768px) {
-    .article img {
-        max-height: 400px;
-    }
-}
-@media screen and (min-width: 1024px) {
-    .article img {
-        max-height: 500px;
-    }
 }
 
 
@@ -125,7 +56,7 @@
 
 
 /**********************************************************************
- Button
+ button
 **********************************************************************/
 .button {
     -webkit-box-align: center;
@@ -258,11 +189,27 @@
 
 
 /**********************************************************************
+ ol
+**********************************************************************/
+.ol {
+    list-style-type: decimal;
+}
+
+
+/**********************************************************************
  section
 **********************************************************************/
 .section {
     margin: 20px auto;
-    width: calc(100% - 40px);
+    width: calc(100% - 20px);
+}
+.section.full-width {
+    width: 100%;
+}
+@media screen and (min-width: 600px) {
+    .section {
+        width: calc(100% - 40px);
+    }
 }
 
 
@@ -284,3 +231,18 @@
     bottom: 0;
 }
 
+
+/**********************************************************************
+ul
+**********************************************************************/
+.ul {
+    list-style-type: disc;
+    margin: 20px 0 20px 40px;
+}
+.ul .ul {
+    list-style-type: circle;
+    margin: 0 0 0 40px;
+}
+.ul .ul .ul {
+    list-style-type: square;
+}
