@@ -1,11 +1,11 @@
 //////////////////////////////////////////////////////////////////////
-// script-full.js
+// script.js
 //////////////////////////////////////////////////////////////////////
 import { Accordion } from './component/accordion.js';
 import { Directory } from './component/directory.js';
 import { TypingAnimation } from './component/typing-animation.js';
 
-class ScriptFull {
+class Script {
 
     //////////////////////////////////////////////////////////////////////
     // Constructor.
@@ -28,14 +28,4 @@ class ScriptFull {
 
 
 }
-
-
-//////////////////////////////////////////////////////////////////////
-// Initialize.
-//////////////////////////////////////////////////////////////////////
-const myInterval = setInterval(() => {
-    if(document.readyState === 'complete') {
-        clearInterval(myInterval);
-        new ScriptFull().Run();
-    }
-}, 100);
+export { Script };

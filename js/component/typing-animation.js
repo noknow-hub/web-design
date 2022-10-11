@@ -18,6 +18,11 @@ class TypingAnimation {
         this.elms = document.querySelectorAll(`.${this.classNameTypingAnimation}`);
 
         this.typeSpeedMS = 50;
+
+        this.domParser = new DOMParser();
+
+        this.cursorElm = document.createElement('SPAN');
+        this.cursorElm.classList.add('cursor');
     }
 
 
@@ -45,6 +50,12 @@ class TypingAnimation {
             }
             elm.myChildNodes = myChildNodes;
             elm.textContent = '';
+            const elmStyle = window.getComputedStyle(elm);
+            this.cursorElm.style.backgroundColor = elmStyle.color;
+            this.cursorElm.style.height = elmStyle.fontSize;
+            elm.myCursor = this.cursorElm.cloneNode(true);
+            elm.appendChild(elm.myCursor);
+            this.blinkCursor(elm);
         }
 
         // scroll event
@@ -90,7 +101,11 @@ class TypingAnimation {
         for(let i = 0; i < childNodes.length; i++) {
             const childNode = childNodes[i];
             if(childNode.nodeType === TypingAnimation.NOTE_TYPE_ELEMENT) {
-                elm.appendChild(childNode);
+                if(elm.myCursor === undefined) {
+                    elm.appendChild(childNode);
+                } else {
+                    elm.myCursor.insertAdjacentElement('beforebegin', childNode);
+                }
                 const childNodes = childNode.childNodes;
                 const myChildNodes = [];
                 for(let j = 0; j < childNodes.length; j++) {
@@ -99,15 +114,35 @@ class TypingAnimation {
                 childNode.myChildNodes = myChildNodes;
                 childNode.textContent = '';
                 await this.startTyping(childNode);
-            }
-            if(childNode.nodeType === TypingAnimation.NOTE_TYPE_TEXT) {
+            } else if(childNode.nodeType === TypingAnimation.NOTE_TYPE_TEXT) {
                 const text = [...childNode.textContent];
                 for(let j = 0; j < text.length; j++) {
-                    elm.innerHTML += text[j];
+                    if(elm.myCursor === undefined) {
+                        elm.innerHTML += text[j];
+                    } else {
+                        elm.myCursor.insertAdjacentHTML('beforebegin', text[j]);
+                    }
                     await this.sleep(this.typeSpeedMS);
                 }
             }
         }
+    }
+
+
+    //////////////////////////////////////////////////////////////////////
+    // Blink the cursor
+    //////////////////////////////////////////////////////////////////////
+    async blinkCursor(elm) {
+        if(elm.myCursor === undefined || elm.myCursor === null) {
+            return;
+        }
+        const intervalID = setInterval(() => {
+            if(elm.myCursor.style.opacity === '1') {
+                elm.myCursor.style.opacity = '0';
+            } else {
+                elm.myCursor.style.opacity = '1';
+            }
+        }, 1000);
     }
 
 

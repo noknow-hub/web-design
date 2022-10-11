@@ -53,6 +53,9 @@
     --nkw-line-height-small: 1.0;
     --nkw-line-height-medium: 1.5;
     --nkw-line-height-large: 2.0;
+    --nkw-max-width-medium: 980px;
+    --nkw-max-width-large: 1180px;
+    --nkw-max-width-x-large: 1380px;
     --nkw-pricing-box-item-background-color: #f8f8f8;
     --nkw-side-menu-box-font-size-list-title: 0.9rem;
     --nkw-side-menu-box-font-size-list-item: 0.8rem;

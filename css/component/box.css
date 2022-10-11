@@ -10,6 +10,20 @@
  <div class="box"></div>
 **********************************************************************/
 .box {
+    box-sizing: border-box;
     margin: 20px auto;
-    width: calc(100% - 40px);
+    padding: 10px;
+    width: calc(100% - 20px);
+}
+.box.full-width {
+    width: 100%;
+}
+@media screen and (min-width: 600px) {
+    .box {
+        padding: 20px;
+        width: calc(100% - 40px);
+    }
+    .box.full-width {
+        width: 100%;
+    }
 }

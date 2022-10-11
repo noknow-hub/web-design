@@ -8,8 +8,13 @@
 
  [HTML]
  <p class="text-with-icon">
-   <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">...</svg>
+   <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><use xlink:href="/icons.svg#home"/></svg>
    <span>TEXT</span>
+ </p>
+
+ <p class="text-with-icon">
+   <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><use xlink:href="/icons.svg#home"/></svg>
+   <a class="link">TEXT</a>
  </p>
 **********************************************************************/
 .text-with-icon {

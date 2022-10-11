@@ -1,0 +1,10 @@
+@charset "UTF-8";
+
+/**********************************************************************
+ Box
+**********************************************************************/
+.box.glassmorphism {
+    background-color: var(--nkw-glassmorphism-background-color);
+    border-radius: var(--nkw-glassmorphism-border-radius);
+    border: var(--nkw-glassmorphism-border);
+}

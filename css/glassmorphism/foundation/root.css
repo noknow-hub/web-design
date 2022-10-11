@@ -1,0 +1,8 @@
+@charset "UTF-8";
+
+:root {
+    --nkw-glassmorphism-background-color: rgba(255, 255, 255, 0.25);
+    --nkw-glassmorphism-backdrop-filter: blur(4px);
+    --nkw-glassmorphism-border: 1px solid rgba(255, 255, 255, 0.18);
+    --nkw-glassmorphism-border-radius: 7px;
+}
