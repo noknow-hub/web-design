@@ -4,7 +4,7 @@
     "url": "https://github.com/noknow-hub/web-design/issues"
   },
   "description": "CSS / JS utilities",
-  "homepage": "https://github.com/noknow-hub/web-design/README.md",
+  "homepage": "https://github.com/noknow-hub/web-design/blob/main/toaster/README.md",
   "license": "MIT",
   "main": "index.js",
   "name": "@noknow/web-design-toaster",
@@ -21,7 +21,7 @@
   },
   "type": "module",
   "exports": {
-    "import": "./index.js",
+    "import": "./index.js"
   },
-  "version": "0.1.0"
+  "version": "0.1.1"
 }
