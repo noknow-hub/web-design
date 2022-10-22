@@ -1,0 +1,109 @@
+@charset "UTF-8";
+
+@import '../foundation/style.css';
+
+
+/**********************************************************************
+ Roadmap box
+
+ [HTML]
+ <div class="roadmap-box">
+ </div>
+**********************************************************************/
+.roadmap-box {
+    box-sizing: border-box;
+    display: -webkit-flex;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px auto;
+    padding: 10px;
+    width: calc(100% - 20px);
+}
+@media screen and (min-width: 600px) {
+    .roadmap-box {
+        width: calc(100% - 40px);
+    }
+}
+.roadmap-box > .item-box {
+    display: -webkit-flex;
+    display: flex;
+    margin-top: 20px;
+    width: 100%;
+}
+.roadmap-box > .item-box:nth-of-type(1) {
+    margin-top: 0;
+}
+@media screen and (min-width: 768px) {
+    .roadmap-box.wrap > .item-box {
+        margin-top: 40px;
+        width: 50%;
+    }
+    .roadmap-box.wrap > .item-box:nth-of-type(2) {
+        margin-top: 0;
+    }
+}
+.roadmap-box > .item-box > .title {
+    box-sizing: border-box;
+    font-size: 1.2em;
+    line-height: 1.0;
+    padding-right: 5px;
+    -webkit-writing-mode: vertical-lr;
+    writing-mode: vertical-lr;
+}
+@media screen and (min-width: 768px) {
+    .roadmap-box > .item-box > .title {
+        font-size: 1.5em;
+        padding-right: 10px;
+    }
+}
+.roadmap-box > .item-box > ul {
+    border-left: 5px solid;
+    width: 100%;
+}
+.roadmap-box > .item-box > ul > .sub-list-item {
+    display: -webkit-flex;
+    display: flex;
+    margin-top: 20px;
+    width: 100%;
+}
+.roadmap-box > .item-box > ul > .sub-list-item:nth-of-type(1) {
+    margin-top: 0;
+}
+.roadmap-box > .item-box > ul > .sub-list-item > .title {
+    box-sizing: border-box;
+    font-size: 0.9em;
+    line-height: 1.0;
+    padding: 0px 5px;
+    -webkit-writing-mode: vertical-lr;
+    writing-mode: vertical-lr;
+}
+@media screen and (min-width: 768px) {
+    .roadmap-box > .item-box > ul > .sub-list-item > .title {
+        font-size: 1.1em;
+        padding: 0px 10px;
+    }
+}
+.roadmap-box > .item-box > ul > .sub-list-item > ul {
+     border-left: 2px solid;
+     width: 100%;
+}
+.roadmap-box > .item-box > ul > .sub-list-item > ul > .item {
+    -webkit-align-items: flex-start;
+    align-items: flex-start;
+    box-sizing: border-box;
+    display: -webkit-flex;
+    display: flex;
+    line-height: 1.5;
+    min-height: 45px;
+    padding: 5px 10px;
+}
+.roadmap-box > .item-box > ul > .sub-list-item > ul > .item > .icon {
+    flex-shrink: 0;
+    height: var(--nkw-icon-size-medium);
+    margin-right: 5px;
+    width: var(--nkw-icon-size-medium);
+}
+
+
+
+

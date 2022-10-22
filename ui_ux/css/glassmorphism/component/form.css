@@ -1,0 +1,28 @@
+@charset "UTF-8";
+
+/**********************************************************************
+ Form
+**********************************************************************/
+.form-group.glassmorphism > .input-group {
+    background-color: var(--nkw-glassmorphism-background-color);
+    border-radius: var(--nkw-glassmorphism-border-radius);
+    border: var(--nkw-glassmorphism-border);
+}
+.form-group.glassmorphism > .input-group .input,
+.form-group.glassmorphism > .input-group .select,
+.form-group.glassmorphism > .input-group .textarea {
+    background-color: unset;
+    border: none;
+}
+.form-group.glassmorphism .input,
+.form-group.glassmorphism .select,
+.form-group.glassmorphism .textarea {
+    background-color: var(--nkw-glassmorphism-background-color);
+    border-radius: var(--nkw-glassmorphism-border-radius);
+    border: var(--nkw-glassmorphism-border);
+    color: inherit;
+}
+.form-group.glassmorphism .icon {
+    fill: inherit;
+}
+
