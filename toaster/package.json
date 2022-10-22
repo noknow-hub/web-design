@@ -1,0 +1,27 @@
+{
+  "author": "noknow",
+  "bugs": {
+    "url": "https://github.com/noknow-hub/web-design/issues"
+  },
+  "description": "CSS / JS utilities",
+  "homepage": "https://github.com/noknow-hub/web-design/README.md",
+  "license": "MIT",
+  "main": "index.js",
+  "name": "@noknow/web-design-toaster",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/noknow-hub/web-design.git",
+    "directory": "web-design/toaster"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "type": "module",
+  "exports": {
+    "import": "./index.js",
+  },
+  "version": "0.1.0"
+}
