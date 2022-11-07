@@ -48,26 +48,47 @@
 .pricing-box > .item {
     background-color: var(--nkw-pricing-box-item-background-color);
     box-sizing: border-box;
-    margin: 10px;
+    margin: 10px 0 10px 20px;
     padding: 0;
     width: 100%;
 }
 @media screen and (min-width: 600px) {
     .pricing-box > .item {
-        width: calc(50% - 20px);
+        width: calc(50% - 10px);
+    }
+    .pricing-box > .item:nth-of-type(2n + 1) {
+        margin-left: 0;
     }
 }
 @media screen and (min-width: 768px) {
     .pricing-box > .item {
-        width: calc(33% - 20px);
+        width: calc(33.33% - 13.33px);
+    }
+    .pricing-box > .item:nth-of-type(2n + 1) {
+        margin-left: 20px;
+    }
+    .pricing-box > .item:nth-of-type(3n + 1) {
+        margin-left: 0;
     }
 }
 @media screen and (min-width: 1024px) {
     .pricing-box > .item {
-        width: calc(25% - 20px);
+        width: calc(25% - 15px);
+    }
+    .pricing-box > .item:nth-of-type(3n + 1) {
+        margin-left: 20px;
+    }
+    .pricing-box > .item:nth-of-type(4n + 1) {
+        margin-left: 0;
     }
     .pricing-box.max-3-cols > .item {
-        width: calc(33% - 20px);
+        width: calc(33.33% - 13.33px);
+    }
+    .pricing-box.max-3-cols > .item:nth-of-type(4n + 1) {
+        margin-left: 20px;
+    }
+    .pricing-box.max-3-cols > .item:nth-of-type(3n + 1) {
+        margin-left: 0;
     }
 }
 .pricing-box > .item > .img-box {
@@ -150,6 +171,7 @@
     align-items: flex-start;
     display: -webkit-flex;
     display: flex;
+    flex-direction: column;
     font-size: 1.0em;
     line-height: 24px;
     margin-bottom: 10px;

@@ -7,7 +7,7 @@
   "homepage": "https://github.com/noknow-hub/web-design/README.md",
   "license": "MIT",
   "main": "index.js",
-  "name": "@noknow/web-design",
+  "name": "@noknow/web-design-ui-ux",
   "publishConfig": {
     "access": "public"
   },
@@ -23,5 +23,5 @@
   "exports": {
     "import": "./js/*"
   },
-  "version": "0.1.0"
+  "version": "0.1.1"
 }

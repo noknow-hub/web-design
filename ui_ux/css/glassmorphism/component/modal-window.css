@@ -1,0 +1,22 @@
+@charset "UTF-8";
+
+/**********************************************************************
+ Modal Window
+**********************************************************************/
+.modal-window.glassmorphism > .modal {
+    background-color: var(--nkw-glassmorphism-background-color-x-harder);
+    border-radius: var(--nkw-glassmorphism-border-radius);
+    border: var(--nkw-glassmorphism-border);
+}
+.modal-window.glassmorphism > .modal > .modal-header > .btn {
+    background-color: var(--nkw-glassmorphism-background-color);
+    border-radius: var(--nkw-glassmorphism-border-radius);
+    border: var(--nkw-glassmorphism-border);
+    color: var(--nkw-glassmorphism-color);
+}
+.modal-window.glassmorphism > .modal > .modal-footer > .btn {
+    background-color: var(--nkw-glassmorphism-background-color);
+    border-radius: var(--nkw-glassmorphism-border-radius);
+    border: var(--nkw-glassmorphism-border);
+    color: var(--nkw-glassmorphism-color);
+}

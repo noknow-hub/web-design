@@ -113,9 +113,12 @@
     border: none;
 }
 .form-group .input-group > .icon {
+    color: var(--nkw-color-form-icon);
     fill: var(--nkw-color-form-icon);
     height: var(--nkw-icon-size-medium);
+    line-height: initial;
     padding: 0 10px;
+    text-align: center;
     width: var(--nkw-icon-size-medium);
 }
 
