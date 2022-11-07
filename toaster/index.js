@@ -227,3 +227,4 @@ class Toaster {
 
 }
 
+export { Toaster }
