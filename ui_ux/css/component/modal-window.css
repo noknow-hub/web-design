@@ -1,10 +1,10 @@
 @charset "UTF-8";
 
-@import '../foundation/style.css';
-
-
 /**********************************************************************
  Modal Window
+
+ [Required]
+ @import '../foundation/style.css';
 
  [HTML]
  <button type="button" data-modal-target="MODAL_ID">

@@ -1,10 +1,10 @@
 @charset "UTF-8";
 
-@import '../foundation/style.css';
-
-
 /**********************************************************************
  Horizontal List
+
+ [Required]
+ @import '../foundation/style.css';
 
  [HTML]
  <ul class="horizontal-list">

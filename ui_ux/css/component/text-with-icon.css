@@ -1,10 +1,10 @@
 @charset "UTF-8";
 
-@import '../foundation/style.css';
-
-
 /**********************************************************************
  Text With Icon
+
+ [Required]
+ @import '../foundation/style.css';
 
  [HTML]
  <p class="text-with-icon">

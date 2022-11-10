@@ -1,10 +1,10 @@
 @charset "UTF-8";
 
-@import '../foundation/style.css';
-
-
 /**********************************************************************
  Typing Animation
+
+ [Required]
+ @import '../foundation/style.css';
 
  [HTML]
  <p class="typing-animation">Hello World</p>

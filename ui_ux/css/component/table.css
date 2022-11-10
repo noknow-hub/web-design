@@ -1,10 +1,10 @@
 @charset "UTF-8";
 
-@import '../foundation/style.css';
-
-
 /**********************************************************************
  Table
+
+ [Required]
+ @import '../foundation/style.css';
 
  [HTML]
  <div class="table-box">

@@ -1,10 +1,10 @@
 @charset "UTF-8";
 
-@import '../foundation/style.css';
-
-
 /**********************************************************************
  Card List
+
+ [Required]
+ @import '../foundation/style.css';
 
  [HTML]
  <ul class="card-list [max-3-cols]">

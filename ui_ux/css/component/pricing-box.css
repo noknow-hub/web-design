@@ -1,10 +1,10 @@
 @charset "UTF-8";
 
-@import '../foundation/style.css';
-
-
 /**********************************************************************
  Pricing ox
+
+ [Required]
+ @import '../foundation/style.css';
 
  [HTML]
  <div class="pricing-box [max-3-cols]">
