@@ -106,6 +106,9 @@
     display: -webkit-flex;
     display: flex;
 }
+.directory .sub-list > .list > .item {
+    margin-left: 5px;
+}
 .directory > .list > .item.drop-down,
 .directory .sub-list > .list > .item.drop-down {
     cursor: pointer;
