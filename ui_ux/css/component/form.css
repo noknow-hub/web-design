@@ -15,7 +15,7 @@
  <div class="form-group">
    <label class="label">EMAIL</label>
    <div class="input-group">
-     <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><use xlink:href="/img/icons.svg#XXXX"/></svg>
+     <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><use href="/img/icons.svg#XXXX"/></svg>
      <input class="input" name="email" type="email">
    </div>
  </div>
@@ -89,12 +89,44 @@
     min-height: 7.0em;
     resize: vertical;
 }
+.form-group [contenteditable=true]:empty:before{
+    content: attr(placeholder);
+    display: block;
+    pointer-events: none;
+}
 .form-group .input[type="radio"],
 .form-group .input[type="checkbox"] {
     height: unset;
     margin: 0 5px;
     vertical-align: middle;
     width: unset;
+}
+.form-group .input[type="checkbox"].switch {
+    -webkit-appearance: none;
+    appearance: none;
+    border-radius: 16px;
+    height: 32px;
+    position: relative;
+    transition: background-color 0.3s ease-in-out;
+    width: 56px;
+}
+.form-group .input[type="checkbox"].switch:checked {
+    background-color: var(--nkw-color-success);
+}
+.form-group .input[type="checkbox"].switch::before {
+    background-color: #fff;
+    border-radius: 50%;
+    box-sizing: border-box;
+    content: '';
+    height: 24px;
+    left: 3px;
+    position: absolute;
+    top: 3px;
+    transition: left 0.3s ease-in-out;
+    width: 24px;
+}
+.form-group .input[type="checkbox"].switch:checked::before {
+    left: 27px;
 }
 .form-group.inline > .input,
 .form-group.inline > .form-group-check,
