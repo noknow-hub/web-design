@@ -8,6 +8,8 @@
     --nkw-glassmorphism-background-color-xxx-harder: rgba(255, 255, 255, 0.65);
     --nkw-glassmorphism-backdrop-filter: blur(4px);
     --nkw-glassmorphism-border: 1px solid rgba(255, 255, 255, 0.18);
+    --nkw-glassmorphism-border-reverse: 1px solid rgba(91, 91, 91, 0.18);
     --nkw-glassmorphism-border-radius: 7px;
     --nkw-glassmorphism-color: #fff;
+    --nkw-glassmorphism-color-reverse: #5b5b5b;
 }

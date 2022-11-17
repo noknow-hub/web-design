@@ -27,3 +27,59 @@
     fill: #fff;
 }
 
+.form-group.glassmorphism [data-select-filter-tooltip-id] {
+    background-color: var(--nkw-glassmorphism-background-color-xxx-harder);
+    border-radius: var(--nkw-glassmorphism-border-radius);
+    border: var(--nkw-glassmorphism-border);
+}
+.form-group.glassmorphism .select-filter-tooltip > .form-group {
+    margin: 10px;
+    width: calc(100% - 20px);
+}
+.form-group.glassmorphism .select-filter-tooltip > .form-group > .input-group {
+    background-color: var(--nkw-glassmorphism-background-color-xxx-harder);
+    border-radius: var(--nkw-glassmorphism-border-radius);
+    border: var(--nkw-glassmorphism-border);
+}
+.form-group.glassmorphism [data-select-filter-tooltip-id] > .filter-box {
+    display: -webkit-flex;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px;
+    max-height: 50vh;
+    overflow-y: scroll;
+    position: relative;
+    width: calc(100% - 20px);
+}
+.form-group.glassmorphism [data-select-filter-tooltip-id] > .filter-box > [type="radio"] {
+    display: none;
+}
+.form-group.glassmorphism [data-select-filter-tooltip-id] > .filter-box > .item {
+    -webkit-align-items: center;
+    align-items: center;
+    border-bottom: 1px solid;
+    color: var(--nkw-glassmorphism-color-reverse);
+    cursor: pointer;
+    display: -webkit-flex;
+    display: flex;
+    flex: 1 0 400px;
+    font-size: 1.0em;
+    margin: 5px;
+    transition: opacity 0.3s ease-in-out;
+}
+.form-group.glassmorphism [data-select-filter-tooltip-id] > .filter-box > .item:hover {
+    opacity: 0.6;
+}
+.form-group.glassmorphism [data-select-filter-tooltip-id] > .filter-box > .item.display-none {
+    display: none;
+}
+.form-group.glassmorphism .select-filter-tooltip > .form-group .input,
+.form-group.glassmorphism .select-filter-tooltip > .form-group .select,
+.form-group.glassmorphism .select-filter-tooltip > .form-group .textarea {
+    color: var(--nkw-glassmorphism-color-reverse);
+    fill: var(--nkw-glassmorphism-color-reverse);
+}
+.form-group.glassmorphism .select-filter-tooltip > .form-group .icon {
+    color: var(--nkw-glassmorphism-color-reverse);
+    fill: var(--nkw-glassmorphism-color-reverse);
+}
