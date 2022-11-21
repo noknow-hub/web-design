@@ -163,12 +163,12 @@
     cursor: pointer;
     font-size: 1.0em;
     height: 50px;
-    margin: 0;
+    margin: 10px;
     outline: none;
     padding: 10px;
     position: relative;
     text-align: left;
-    width: 100%;
+    width: calc(100% - 20px);
 }
 .form-group [data-select-filter-tooltip-id] {
     background-color: #fff;
@@ -190,7 +190,36 @@
     transform: translateY(10px);
     visibility: visible;
 }
-
-
+.form-group [data-select-filter-tooltip-id] > .filter-box {
+    display: -webkit-flex;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px;
+    max-height: 50vh;
+    overflow-y: scroll;
+    position: relative;
+    width: calc(100% - 20px);
+}
+.form-group [data-select-filter-tooltip-id] > .filter-box > [type="radio"] {
+    display: none;
+}
+.form-group [data-select-filter-tooltip-id] > .filter-box > .item {
+    -webkit-align-items: center;
+    align-items: center;
+    border-bottom: 1px solid;
+    cursor: pointer;
+    display: -webkit-flex;
+    display: flex;
+    flex: 1 0 350px;
+    font-size: 1.0em;
+    margin: 5px;
+    transition: opacity 0.3s ease-in-out;
+}
+.form-group [data-select-filter-tooltip-id] > .filter-box > .item:hover {
+    opacity: 0.6;
+}   
+.form-group [data-select-filter-tooltip-id] > .filter-box > .item.display-none {
+    display: none;
+} 
 
 
