@@ -1,13 +1,14 @@
-@charset "UTF-8";
-
-
 /**********************************************************************
- button
+ Table
 **********************************************************************/
-.button.glassmorphism {
+.table-box.glassmorphism > .table > .tbody {
     background-color: var(--nkw-glassmorphism-background-color);
     border-radius: var(--nkw-glassmorphism-border-radius);
     border: var(--nkw-glassmorphism-border);
-    color: #fff;
-    fill: #fff;
+}
+.table-box.glassmorphism > .table > .tbody > .tr {
+    transition: background-color 0.3s ease-in-out;
+}
+.table-box.glassmorphism > .table > .tbody > .tr:hover {
+    background-color: var(--nkw-glassmorphism-background-color-lighter) !important;
 }

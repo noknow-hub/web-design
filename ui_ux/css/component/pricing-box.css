@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 /**********************************************************************
- Pricing ox
+ Pricing box
 
  [Required]
  @import '../foundation/style.css';
@@ -48,12 +48,13 @@
 .pricing-box > .item {
     background-color: var(--nkw-pricing-box-item-background-color);
     box-sizing: border-box;
-    margin: 10px 0 10px 20px;
+    margin: 10px 0;
     padding: 0;
     width: 100%;
 }
 @media screen and (min-width: 600px) {
     .pricing-box > .item {
+        margin: 10px 0 10px 20px;
         width: calc(50% - 10px);
     }
     .pricing-box > .item:nth-of-type(2n + 1) {

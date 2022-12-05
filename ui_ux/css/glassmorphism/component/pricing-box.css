@@ -1,10 +1,7 @@
-@charset "UTF-8";
-
-
 /**********************************************************************
- button
+ Pricing box
 **********************************************************************/
-.button.glassmorphism {
+.pricing-box.glassmorphism > .item {
     background-color: var(--nkw-glassmorphism-background-color);
     border-radius: var(--nkw-glassmorphism-border-radius);
     border: var(--nkw-glassmorphism-border);

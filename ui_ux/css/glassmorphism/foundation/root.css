@@ -3,6 +3,7 @@
 :root {
     --nkw-glassmorphism-background-color: rgba(255, 255, 255, 0.25);
     --nkw-glassmorphism-background-color-harder: rgba(255, 255, 255, 0.35);
+    --nkw-glassmorphism-background-color-lighter: rgba(255, 255, 255, 0.15);
     --nkw-glassmorphism-background-color-x-harder: rgba(255, 255, 255, 0.45);
     --nkw-glassmorphism-background-color-xx-harder: rgba(255, 255, 255, 0.55);
     --nkw-glassmorphism-background-color-xxx-harder: rgba(255, 255, 255, 0.65);
